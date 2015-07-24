@@ -1,0 +1,243 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ifr_znyj_clbk.aspx.cs" Inherits="app_iframe_ifr_znyj_clbk" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../images/style.css" rel="stylesheet" />
+    <script src="../images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table border="0" bgcolor="#CFF1F3" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" valign="middle" class="p5">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" valign="middle">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <img src="../images/clbk_cltp.jpg" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="1%" bgcolor="#CFF1F3"></td>
+            <td width="30%" valign="top">
+                <table border="0" cellspacing="0" width="98%" cellpadding="0">
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="42" align="left">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="25" valign="bottom">
+                                                    <div align="left">
+                                                        <img src="../images/clbk_bjxxxx.jpg" width="119" height="19" /></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFFF">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="70" height="25" align="left" class="STYLE5">
+                                                    报警类型：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    车辆布控
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    车牌号码：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    picture
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    车牌特写：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    picture
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    车辆类型：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    小轿车
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    车身颜色：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    白色
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    抓拍点位：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    桂花园南门进摄像机
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    车辆状态：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    进桂花园南门
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    抓拍时间：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    2015年3月1日 15：40分25秒
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    报警时间：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    2015年3月1日 15：40分30秒
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="42" align="left">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="25" valign="bottom">
+                                                    <div align="left">
+                                                        <img src="../images/clbk_bjxxxx.jpg" width="119" height="19" /></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="70" height="25" align="left" class="STYLE5">
+                                                    布控车牌：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    浙BG770T
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    布控原因：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    此车为盗抢车辆
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    联系单位：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    宁波市公安局或其它单位
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    联系人：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    ****
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    联系电话：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    13911111111
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    备注：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    无
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="40" align="left">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

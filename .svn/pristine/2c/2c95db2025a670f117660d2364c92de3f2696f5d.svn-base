@@ -1,0 +1,60 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+
+public partial class pchage : System.Web.UI.Page
+{
+    protected string ls_pic = "", ls_jjnr = "", ls_num = "";
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        showpic();
+    }
+    //得到推荐中介信息
+    public void showpic()
+    {
+        int k = 1;
+        TPortalClass.HyContent HyContent = new TPortalClass.HyContent();
+        DataTable dt = HyContent.SearchdocsByKey("00010001", "");
+        if (dt.Rows.Count > 0)
+        {
+            if (dt.Rows.Count > 5)
+            {
+                k = 5;
+            }
+            else
+            {
+                k = dt.Rows.Count;
+            }
+            int num = 1;
+            for (int i = 0; i < k; i++)
+            {
+                string ls_title = dt.Rows[i]["hy_contentcol"].ToString();
+                string ls_url = "/contentmanage/show_art.aspx?docid=" + dt.Rows[i]["id"].ToString();
+
+                if (i == 0)
+                {
+                    ls_pic = "<div class=\"dis\" name=\"f\"><img alt=\"\" src=\"" + TPortalClass.HyCommon.GetImg(ls_title) + "\" width='275' height='82'></div>";
+                    ls_jjnr = "<div class=\"dis\" name=\"f\"><a href=\"" + ls_url + "\" target='_blank'>" + TPortalClass.HyCommon.OutPicGetStr(ls_title, 60) + "</a></div>";
+                    ls_num = "<div onclick=\"play(x[" + i + "]," + i + ")\" name=\"f\">" + num + "</div>";
+                }
+                else
+                {
+                    ls_pic += "<div class=\"undis\" name=\"f\"><img alt=\"\" src=\"" + TPortalClass.HyCommon.GetImg(ls_title) + "\" width='275' height='82'></div>";
+                    ls_jjnr += "<div class=\"undis\" name=\"f\"><a href=\"" + ls_url + "\" target='_blank'>" + TPortalClass.HyCommon.OutPicGetStr(ls_title, 60) + "</a></div>";
+                    ls_num += "<div class=\"f1\" onclick=\"play(x[" + i + "]," + i + ")\" name=\"f\">" + num + "</div>";
+                }
+
+                num++;
+            }
+        }
+        
+    }
+}

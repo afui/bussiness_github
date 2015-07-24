@@ -1,0 +1,256 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ifr_rygk_bkcx.aspx.cs" Inherits="app_iframe_ifr_rygk_bkcx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../images/style.css" rel="stylesheet" />
+    <script src="../images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="310" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="42" bgcolor="#CFF1F3">
+                                <table border="0" align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="25" valign="bottom">
+                                            <div class="zi1">
+                                                报警详细信息
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFFF">
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                                <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="90" height="25" class="STYLE5">报警类型：
+                                        </td>
+                                        <td width="213" class="STYLE5">人员布控
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="30" colspan="2" align="center" class="STYLE5">
+                                            <table width="280" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="140" height="25" align="center">抓拍照片
+                                                    </td>
+                                                    <td width="140" align="center">布控照片
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <img src="../images/rybk_zpzp.jpg" width="130" height="80" />
+                                                    </td>
+                                                    <td align="center">
+                                                        <img src="../images/rybk_bkzp.jpg" width="130" height="80" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" colspan="2" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="113">布控人员姓名：
+                                                    </td>
+                                                    <td width="50">张三
+                                                    </td>
+                                                    <td width="50">性别：
+                                                    </td>
+                                                    <td width="90">男
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">相信度：
+                                        </td>
+                                        <td align="left" class="STYLE5">92%
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">报警地点：
+                                        </td>
+                                        <td align="left" class="STYLE5">桂花园南门进摄像机
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">人员状态：
+                                        </td>
+                                        <td align="left" class="STYLE5">桂花园南门
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">抓拍时间：
+                                        </td>
+                                        <td align="left" class="STYLE5">2015年3月1日 15：40分30秒
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">报警时间：
+                                        </td>
+                                        <td align="left" class="STYLE5">2015年3月1日 15：40分31秒
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="10"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="42" bgcolor="#CFF1F3">
+                                <table border="0" align="left" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="25" valign="bottom">
+                                            <div class="zi1">
+                                                预警原因
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" bgcolor="#FFFFFF">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                                <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="113">布控人员姓名：
+                                                    </td>
+                                                    <td width="190">张三
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="50">性别：
+                                                    </td>
+                                                    <td width="91">男
+                                                    </td>
+                                                    <td width="50">籍贯：
+                                                    </td>
+                                                    <td width="112">河北
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="50">身高：
+                                                    </td>
+                                                    <td width="91">170CM
+                                                    </td>
+                                                    <td width="50">民族：
+                                                    </td>
+                                                    <td width="112">汉
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="80">布控原因：
+                                                    </td>
+                                                    <td width="223">此人为盗抢犯
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="80">联系单位：
+                                                    </td>
+                                                    <td width="223">宁波市公安局
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="66">联系人：
+                                                    </td>
+                                                    <td width="70">******
+                                                    </td>
+                                                    <td width="80">联系电话：
+                                                    </td>
+                                                    <td width="87">13911111111
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="25" align="left" class="STYLE5">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="50">备注：
+                                                    </td>
+                                                    <td width="253">无
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="15%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

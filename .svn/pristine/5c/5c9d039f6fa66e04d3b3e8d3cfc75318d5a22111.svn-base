@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TPortalClass;
+
+public partial class hyajax_hymainajax_gis : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string strId = "";
+        if (this.Request.QueryString["strId"] != null)
+        {
+            strId = this.Request.QueryString["strId"].ToString();
+        }
+        hy_gis hyGis = new hy_gis();
+        DataTable dt = hyGis.getGisByGisIdAnddeptid(strId, "001");
+        if (dt.Rows.Count > 0)
+        {
+            Response.Write(dt.Rows[0]["hy_gisX"].ToString() + "#" + dt.Rows[0]["hy_gisY"].ToString() + "#" + dt.Rows[0]["hy_state"].ToString().Trim());
+        }
+    }
+}

@@ -1,0 +1,54 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using TPortalClass;
+
+public partial class test : System.Web.UI.Page
+{
+        
+protected void Page_Load(object sender, EventArgs e)
+    {
+
+
+
+        txtUserid.Text = this.Session["NBCEI_SESSION_IDENTITY"].ToString();
+ 
+
+    
+        if (!IsPostBack)
+        {
+            DataPlay();
+        }
+    }
+
+    private void DataPlay()
+    {
+        TPortalClass.DAO db = new TPortalClass.DAO();
+        string ls_sql = "";
+        ls_sql = "select top 1 * from AM_Users ";
+        
+        DataTable dt = db.GetDataTable(ls_sql);
+        if (dt.Rows.Count > 0)
+        {
+            this.txtUserAccName.Text = dt.Rows[0]["UserAcc"].ToString();
+            this.txtUserName.Text = dt.Rows[0]["UserName"].ToString();
+            this.txtEmail.Text = dt.Rows[0]["Mail"].ToString();
+            this.txtPhone.Text = dt.Rows[0]["Mobile"].ToString();
+            //this.txtArea.Text = dt.Rows[0]["Area"].ToString();
+            this.txtTime.Text = dt.Rows[0]["Crdt"].ToString();
+            //this.txtAddress.Text = dt.Rows[0]["Address"].ToString();      
+
+        }
+        else {
+            Response.Write("<script>alert('无此记录！');window.location='lnpjgz.aspx'</script>");
+        }
+    }
+
+}

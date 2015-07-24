@@ -1,0 +1,130 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>系统登录</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        document.onkeydown = function () {
+            var e = event.srcElement;
+            if (event.keyCode == 13) {
+                loginsystem();
+                return false;
+            }
+        }
+        function loginsystem() {
+            if (document.getElementById("txt_username").value == "") {
+                alert("请输入用户名！");
+                return;
+            }
+            if (document.getElementById("txt_password").value == "") {
+                alert("请输入密码！");
+                return;
+            }
+            if (document.getElementById("txtCheckCode").value == "") {
+                alert("请输入验证码！");
+                return;
+            }
+            document.getElementById("btnLogin").click();
+        }
+        function from_reset() {
+            document.getElementById("txt_username").value = "";
+            document.getElementById("txt_password").value = ""
+            document.getElementById("txtCheckCode").value = "";
+        }
+        function showimg(im) {
+            im.src = "ggdy/ValidateImg.aspx?" + new Date;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="100%" height="61" border="0" cellpadding="0" cellspacing="0" style="vertical-align: top;">
+            <tr>
+                <td>&nbsp;
+                </td>
+            </tr>
+        </table>
+        <table width="100%" height="90%" border="0" cellpadding="0" cellspacing="0" style="vertical-align: top;">
+            <tr>
+                <td align="center" valign="middle">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <img src="images/login/mp_login.jpg" border="0" /></td>
+                        </tr>
+                    </table>
+                    <table width="712" height="117" border="0" cellpadding="0" cellspacing="0" background="images/login/mp_login_1.jpg">
+                        <tr>
+                            <td align="center" valign="top" class="style_2">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>&nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="85%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="style_2">用户名 ：
+                                        </td>
+                                        <td>
+                                            <input class="smallinput" id="txt_username" style="background-color: #ffffff; border-bottom: #9BA7BD 1px solid; border-left: #9BA7BD 1px solid; border-right: #9BA7BD 1px solid; border-top: #9BA7BD 1px solid; height: 18px; width: 100px; text-transform: lowercase; vertical-align: top;"
+                                                name="txt_username" runat="server" />
+                                        </td>
+                                        <td class="style_2">&nbsp;密码：
+                                        </td>
+                                        <td>
+                                            <input class="smallinput" id="txt_password" type="password" style="background-color: #ffffff; border-bottom: #9BA7BD 1px solid; border-left: #9BA7BD 1px solid; border-right: #9BA7BD 1px solid; border-top: #9BA7BD 1px solid; height: 18px; width: 100px; vertical-align: top;"
+                                                name="txt_password"
+                                                runat="server" />
+                                        </td>
+                                        <td class="style_2">&nbsp;验证码：
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtCheckCode" AutoCompleteType="Disabled" runat="server" Style="background-color: #ffffff; border-bottom: #9BA7BD 1px solid; border-left: #9BA7BD 1px solid; border-right: #9BA7BD 1px solid; border-top: #9BA7BD 1px solid; height: 18px; width: 100px; vertical-align: top;"
+                                                MaxLength="5"></asp:TextBox>&nbsp;
+                                            <img id="ValidateImg" src="ggdy/ValidateImg.aspx" onclick="showimg(this);" style="cursor: pointer;" alt="看不清楚?换一张" />&nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="100%" height="15" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>&nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="30%" border="0" align="right" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="84" align="center">
+                                            <img id="submitlogin" src="images/login/dl.jpg" width="65" height="22" style="cursor: hand;"
+                                                onclick="javascript:loginsystem();" alt="系统登录" />
+                                        </td>
+                                        <td width="97" align="center">
+                                            <img src="images/login/cz.jpg" width="65" height="22" style="cursor: hand;" onclick="from_reset();"
+                                                alt="输入清空" />
+                                        </td>
+                                        <td width="100">&nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" height="61" border="0" cellpadding="0" cellspacing="0" style="vertical-align: top;">
+            <tr>
+                <td>&nbsp;
+                </td>
+            </tr>
+        </table>
+        <div style="display: none;">
+            <asp:Button ID="btnLogin" Text="登录" runat="server" OnClick="btnLogin_Click" /><asp:Label
+                ID="lblurl" runat="server"></asp:Label>
+        </div>
+    </form>
+</body>
+</html>

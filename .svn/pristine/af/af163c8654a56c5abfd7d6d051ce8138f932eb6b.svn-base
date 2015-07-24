@@ -1,0 +1,14 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="sbglxt.aspx.cs" Inherits="iportal_app_sbglxt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    对物业管辖内的监控点、电梯、消防栓等设备进行管理，对需定期维护的设备进行自动提醒功能。
+    </form>
+</body>
+</html>

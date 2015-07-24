@@ -1,0 +1,1965 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="sjjm_clbk.aspx.cs" Inherits="iportal_app_sjjm_clbk" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>车辆管控系统</title>
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+    <script src="images/common.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" valign="top" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" bgcolor="#CFF1F3">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" width="60%" valign="top" bgcolor="#CFF1F3" class="p5">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="10" align="center" valign="middle">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="bk2">
+                                <tr>
+                                    <td height="40" align="left" valign="bottom" background="images/clgkxt_lmbg.jpg">
+                                        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="20%" height="38" align="center" class="STYLE55" id="item11" onclick="tabOver('item1','Headeritem1',1,5,'STYLE55','STYLE66')">
+                                                    <span>
+                                                        <img src="images/clgkxt_tb1.png" width="16" height="16" /></span>&nbsp;车辆布控查询
+                                                </td>
+                                                <td width="20%" align="center" class="STYLE66" id="item12" onclick="tabOver('item1','Headeritem1',2,5,'STYLE55','STYLE66')">
+                                                    <span>
+                                                        <img src="images/clgkxt_tb2.png" width="13" height="16" /></span>&nbsp;布控车辆统计
+                                                </td>
+                                                <td width="20%" align="center" class="STYLE66" id="item13" onclick="tabOver('item1','Headeritem1',3,5,'STYLE55','STYLE66')">
+                                                    <span>
+                                                        <img src="images/clgkxt_tb3.png" width="16" height="16" /></span>&nbsp;过车数据查询
+                                                </td>
+                                                <td width="20%" align="center" class="STYLE66" id="item14" onclick="tabOver('item1','Headeritem1',4,5,'STYLE55','STYLE66')">
+                                                    <span>
+                                                        <img src="images/clgkxt_tb4.png" width="14" height="16" /></span>&nbsp;过车数据统计
+                                                </td>
+                                                <td width="20%">
+                                                    <span>
+                                                        <img src="images/clgkxt_tb5.png" width="14" height="16" /></span>&nbsp;<a href="http://www.baidu.com" target="_blank" class="STYLE66">新增车辆布控</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="240" valign="top">
+                                                    <div id="Headeritem11">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bk3">
+                                                            <tr>
+                                                                <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" width="98%" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                                                                    <tr>
+                                                                                        <td width="10" height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="65" align="left" class="STYLE5">
+                                                                                            时间
+                                                                                        </td>
+                                                                                        <td width="210" align="left" class="STYLE5">
+                                                                                            某年月日分秒到某年月
+                                                                                        </td>
+                                                                                        <td width="60" align="left" class="STYLE5">
+                                                                                            车牌号
+                                                                                        </td>
+                                                                                        <td width="170" align="left" class="STYLE5">
+                                                                                            浙B******
+                                                                                        </td>
+                                                                                        <td width="64" align="left" class="STYLE5">
+                                                                                            车身颜色
+                                                                                        </td>
+                                                                                        <td width="216" align="left" class="STYLE5">
+                                                                                            黑色
+                                                                                        </td>
+                                                                                        <td width="10" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            小区名称
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            桂花园
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            监控点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            ******
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            报警地点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            ******
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="right" class="STYLE5">
+                                                                                            <label>
+                                                                                                <input name="Submit" type="submit" class="STYLE5" value="点击查询" />
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="50" align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table  width="97%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="middle" class="STYLE7">
+                                                                                查询结果：（当前共有10条）
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                                                        <tr>
+                                                                            <td width="8%" height="33" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                序号
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                报警地点
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌号
+                                                                            </td>
+                                                                            <td width="12%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌特写
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类型
+                                                                            </td>
+                                                                            <td width="20%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                监控点
+                                                                            </td>
+                                                                            <td width="25%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                报警时间
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                1
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园南门进
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                浙B00643
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                pic
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小轿车
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园南门进
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2015年3月3日15：43分31秒
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                3
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                4
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                5
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                6
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="1%" bgcolor="#CFF1F3">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            报警详细信息</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <img src="images/clgkxt_cltp.jpg" width="100%" height="216" />
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="5">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td width="70" height="25" align="left" class="STYLE5">
+                                                                                                        报警类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        车辆布控
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车牌号码：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙B00643
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        车牌特写：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        picture
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        小轿车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车身颜色：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        白色
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍点位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园南门进摄像机
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆状态：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        进桂花园南门
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分25秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        报警时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分30秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            预警原因</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td width="70" height="25" align="left" class="STYLE5">
+                                                                                                        布控车牌：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙BG770T
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        布控原因：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        此车为盗抢车辆
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        联系单位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        宁波市公安局或其它单位
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        联系人：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        ****
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        联系电话：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        13911111111
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        备注：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        无
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div id="Headeritem12" style="display: none">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bk3">
+                                                            <tr>
+                                                                <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                                                                    <tr>
+                                                                                        <td width="10" height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="65" align="left" class="STYLE5">
+                                                                                            时间
+                                                                                        </td>
+                                                                                        <td width="210" align="left" class="STYLE5">
+                                                                                            某年月日分秒到某年月
+                                                                                        </td>
+                                                                                        <td width="60" align="left" class="STYLE5">
+                                                                                            车牌号
+                                                                                        </td>
+                                                                                        <td width="170" align="left" class="STYLE5">
+                                                                                            浙B87445
+                                                                                        </td>
+                                                                                        <td width="64" align="left" class="STYLE5">
+                                                                                            车身颜色
+                                                                                        </td>
+                                                                                        <td width="216" align="left" class="STYLE5">
+                                                                                            蓝色
+                                                                                        </td>
+                                                                                        <td width="10" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            小区名称
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            胡园
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            监控点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            ******
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            报警地点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            ******
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="right" class="STYLE5">
+                                                                                            <label>
+                                                                                                <input name="Submit" type="submit" class="STYLE5" value="点击统计" />
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="50" align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="97%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="middle" class="STYLE7">
+                                                                                查询结果：（当前共有10条）
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                                                        <tr>
+                                                                            <td width="8%" height="33" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                序号
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                报警地点
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌号
+                                                                            </td>
+                                                                            <td width="12%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌特写
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类型
+                                                                            </td>
+                                                                            <td width="20%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                监控点
+                                                                            </td>
+                                                                            <td width="25%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                报警时间
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                1
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园南门进
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                浙B00643
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                pic
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小轿车
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园南门进
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2015年3月3日15：43分31秒
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园北门进
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                浙B00643
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                pic
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小货车
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园北门
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2015年4月3日12：53分31秒
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                3
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                4
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                5
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                6
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="1%" bgcolor="#CFF1F3">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            报警详细信息</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <img src="images/clgkxt_cltp.jpg" width="100%" height="216" />
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="5">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td width="70" height="25" align="left" class="STYLE5">
+                                                                                                        报警类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        车辆布控
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车牌号码：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙B00643
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        车牌特写：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        picture
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        小轿车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车身颜色：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        白色
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍点位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园南门进摄像机
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆状态：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        进桂花园南门
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分25秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        报警时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分30秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            预警原因</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td width="70" height="25" align="left" class="STYLE5">
+                                                                                                        布控车牌：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙BG770T
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        布控原因：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        此车为盗抢车辆
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        联系单位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        宁波市公安局或其它单位
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        联系人：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        ****
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        联系电话：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        13911111111
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        备注：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        无
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div id="Headeritem13" style="display: none">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bk3">
+                                                            <tr>
+                                                                <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                                                                    <tr>
+                                                                                        <td width="10" height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="65" align="left" class="STYLE5">
+                                                                                            时间
+                                                                                        </td>
+                                                                                        <td width="210" align="left" class="STYLE5">
+                                                                                            某年月日分秒到某年月
+                                                                                        </td>
+                                                                                        <td width="60" align="left" class="STYLE5">
+                                                                                            车牌号
+                                                                                        </td>
+                                                                                        <td width="170" align="left" class="STYLE5">
+                                                                                            浙B48884
+                                                                                        </td>
+                                                                                        <td width="64" align="left" class="STYLE5">
+                                                                                            车身颜色
+                                                                                        </td>
+                                                                                        <td width="216" align="left" class="STYLE5">
+                                                                                            银白色
+                                                                                        </td>
+                                                                                        <td width="10" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            小区名称
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            监控点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园东门
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            出入口
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园东门
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="right" class="STYLE5">
+                                                                                            <label>
+                                                                                                <input name="Submit" type="submit" class="STYLE5" value="点击查询" />
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="50" align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table  width="97%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="middle" class="STYLE7">
+                                                                                查询结果：（当前共有10条）
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                                                        <tr>
+                                                                            <td width="8%" height="33" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                序号
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌号
+                                                                            </td>
+                                                                            <td width="8%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类型
+                                                                            </td>
+                                                                            <td width="9%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类别
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                监控点
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌特写
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                过车地点
+                                                                            </td>
+                                                                            <td width="25%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                过车时间
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                1
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                浙B00643
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小型车
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小轿车
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                朗园东门
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                pic
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                朗园东门
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2015年3月3日15：43分31秒
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                3
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                4
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                5
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                6
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="1%" bgcolor="#CFF1F3">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            过车信息</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <img src="images/clgkxt_cltp.jpg" width="100%" height="216" />
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="5">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车牌号码：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙B00643
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        车牌特写：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        picture
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        小轿车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车身颜色：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        白色
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类别：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        固定车辆/固定临时车辆/外来车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍点位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园南门进摄像机
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆状态：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        进桂花园南门
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分25秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车主：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园7号708室
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div id="Headeritem14" style="display: none">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bk3">
+                                                            <tr>
+                                                                <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                                                                    <tr>
+                                                                                        <td width="10" height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td width="65" align="left" class="STYLE5">
+                                                                                            时间
+                                                                                        </td>
+                                                                                        <td width="210" align="left" class="STYLE5">
+                                                                                            某年月日分秒到某年月
+                                                                                        </td>
+                                                                                        <td width="60" align="left" class="STYLE5">
+                                                                                            车牌号
+                                                                                        </td>
+                                                                                        <td width="170" align="left" class="STYLE5">
+                                                                                            浙B48884
+                                                                                        </td>
+                                                                                        <td width="64" align="left" class="STYLE5">
+                                                                                            车身颜色
+                                                                                        </td>
+                                                                                        <td width="216" align="left" class="STYLE5">
+                                                                                            银白色
+                                                                                        </td>
+                                                                                        <td width="10" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            小区名称
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            监控点
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园东门
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            出入口
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            朗园东门
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="32" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td height="30" align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                        <td align="right" class="STYLE5">
+                                                                                            <label>
+                                                                                                <input name="Submit" type="submit" class="STYLE5" value="点击统计" />
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td align="left" class="STYLE5">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="50" align="center" valign="middle">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table  width="97%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="middle" class="STYLE7">
+                                                                                查询结果：（当前共有10条）
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table width="98%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                                                        <tr>
+                                                                            <td width="8%" height="33" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                序号
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌号
+                                                                            </td>
+                                                                            <td width="8%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类型
+                                                                            </td>
+                                                                            <td width="9%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车辆类别
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                监控点
+                                                                            </td>
+                                                                            <td width="10%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                车牌特写
+                                                                            </td>
+                                                                            <td width="15%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                过车地点
+                                                                            </td>
+                                                                            <td width="25%" align="center" bgcolor="7ECF72" class="STYLE8">
+                                                                                过车时间
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                1
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                浙B00643
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                小型车
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                商务车
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园东门
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                piccc
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                桂花园东门
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2015年3月3日15：43分31秒
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                2
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                3
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                4
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                5
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td height="25" align="center" bgcolor="#F2F2F2" class="STYLE5">
+                                                                                6
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td bgcolor="#F2F2F2">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td height="5" align="center" valign="middle">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="1%" bgcolor="#CFF1F3">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                                    <tr>
+                                                                                        <td height="42" align="left" bgcolor="#CFF1F3">
+                                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" valign="bottom">
+                                                                                                        <div align="left" class="zi1">
+                                                                                                            过车信息</div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="center" valign="top" bgcolor="#FFFFFF">
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <img src="images/clgkxt_cltp.jpg" width="100%" height="216" />
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="5">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车牌号码：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        浙B00643
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="30" align="left" class="STYLE5">
+                                                                                                        车牌特写：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        picture
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类型：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        小轿车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车身颜色：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        白色
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆类别：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        固定车辆/固定临时车辆/外来车
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍点位：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园南门进摄像机
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车辆状态：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        进桂花园南门
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        抓拍时间：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        2015年3月1日 15：40分25秒
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="25" align="left" class="STYLE5">
+                                                                                                        车主：
+                                                                                                    </td>
+                                                                                                    <td align="left" class="STYLE5">
+                                                                                                        桂花园7号708室
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                                <tr>
+                                                                                                    <td height="12">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>                     
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="10" align="center" valign="middle">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

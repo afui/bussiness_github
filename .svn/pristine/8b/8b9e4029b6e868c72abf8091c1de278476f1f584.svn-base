@@ -1,0 +1,227 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>社区智慧物业管理系统</title>
+
+    <link href="app/images/style.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function changeSrc(strSrc) {
+            document.getElementById('ifr_clbk').src = strSrc;
+        }
+        function changeBk(strTd) {
+            document.getElementById(strTd).style.backgroundImage = "url(app/images/clbk_left_bg2.jpg)";
+            var strIdArray = new Array("td_znyj", "td_yjya", "td_gis", "td_clgl", "td_sq", "td_zb", "td_spjk");
+            for (var i = 0; i < strIdArray.length; i++) {
+                if (strIdArray[i] != strTd) {
+                    document.getElementById(strIdArray[i]).style.backgroundImage = "url(app/images/clbk_left_bg3.jpg)";
+                }
+            }
+        }
+
+        //Timer.
+        var timerID = null;
+        var timerRunning = false;
+        function fStopClock() {
+            if (timerRunning)
+                window.clearTimeout(timerID);
+            timerRunning = false;
+        }
+        function fGetTime() {
+            var datNow = new Date();
+            var year = datNow.getFullYear();
+            var month = datNow.getMonth() + 1;
+            var week = datNow.getUTCDay();
+            var date = datNow.getDate();
+            var hours = datNow.getHours();
+            var minutes = datNow.getMinutes();
+            var seconds = datNow.getSeconds();
+            var day = datNow.getDay();
+            var strTime = "";
+            week = fFormatWeek(week);
+            strTime += year + "年" + month + "月" + date + "日 ";
+            strTime += "星期" + week + " ";
+            strTime += ((hours <= 24) ? hours : hours - 24);
+            strTime += ((minutes < 10) ? ":0" : ":") + minutes;
+            strTime += ((seconds < 10) ? ":0" : ":") + seconds;
+            spnDate.innerText = strTime;
+            timerID = window.setTimeout("fGetTime()", 1000);
+            timerRunning = true;
+        }
+        function fFormatWeek(src) {
+            var sValue = "";
+            var sTmp = "1,2,3,4,5,6,7,0";
+            if (sTmp.indexOf(src) == -1) return "1"; //如果异常,则退出，返回星期一.
+            switch (src) {
+                case 1:
+                    sValue = "一";
+                    break;
+                case 2:
+                    sValue = "二";
+                    break;
+                case 3:
+                    sValue = "三";
+                    break;
+                case 4:
+                    sValue = "四";
+                    break;
+                case 5:
+                    sValue = "五";
+                    break;
+                case 6:
+                    sValue = "六";
+                    break;
+                case 7:
+                    sValue = "日";
+                    break;
+                case 0:
+                    sValue = "日";
+                    break;
+                default:
+                    sValue = "3";
+                    break;
+            }
+            return sValue;
+        }
+        function fStartClock() {
+            fStopClock();
+            fGetTime();
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="2885" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top">
+                    <table width="1440" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="72" height="90" background="app/images/clbk_bg1.jpg">&nbsp;</td>
+                            <td width="329" background="app/images/clbk_bg1.jpg">
+                                <img src="app/images/clbk_xtmc.jpg" width="329" height="90" /></td>
+                            <td width="1039" align="right" valign="bottom" background="app/images/clbk_bg1.jpg">
+                                <table width="800" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="307" height="35" align="left">&nbsp;</td>
+                                        <td width="28" align="left">
+                                            <img src="app/images/clbk_zt_1.png" width="21" height="31" /></td>
+                                        <td width="120" align="left" class="STYLE3">系统管理员</td>
+                                        <td width="40" align="left">
+                                            <img src="app/images/clbk_zt_2.png" width="32" height="30" /></td>
+                                        <td width="100" align="left" class="STYLE3">管理员组</td>
+                                        <td width="90" align="left"><span class="STYLE3" id="spnDate">
+                                            <script language="JavaScript">fStartClock();</script>
+                                        </span></td>
+                                        <td width="50">&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="5" rowspan="6">&nbsp;</td>
+                            <td rowspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td height="5" colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table width="1440" height="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="245" height="700" valign="top" bgcolor="CFF1F3">
+                                            <table width="225" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="3"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="app/images/clbk_left_bg1.jpg" height="36" width="225" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="12"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="bk">
+                                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="211">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td height="30" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_znyj" class="zi2"><a href="javascript:void(0);" onclick="changeSrc('app/zh_index.aspx');changeBk('td_znyj');">智能预警系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_yjya" class="zi2"><a href="javascript:void(0);" onclick="changeSrc('app/yjya_index.aspx');changeBk('td_yjya');">应急预案系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_gis"><a href="javascript:void(0);" class="zi2" onclick="changeSrc('app/GISpt.aspx');changeBk('td_gis');">GIS系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_clgl"><a href="javascript:void(0);" class="zi2" onclick="changeSrc('app/yhclgl_index.aspx');changeBk('td_clgl');">用户车辆管理系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_sq"><a href="javascript:void(0);" class="zi2" onclick="changeSrc('app/sbglxt.aspx');changeBk('td_sq');">社区设备管理系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_zb"><a href="javascript:void(0);" class="zi2" onclick="changeSrc('app/zbxlxt.aspx');changeBk('td_zb');">值班巡逻系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9" align="left"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="30" align="left" style="background-image: url(app/images/clbk_left_bg3.jpg)" id="td_spjk"><a href="javascript:void(0);" class="zi2" onclick="changeSrc('app/spjkkzxt.aspx');changeBk('td_spjk');">视频监控控制系统</a> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td width="5" height="700"></td>
+                                        <td height="700" valign="top" bgcolor="#CFF1F3">
+                                            <iframe src="app/znyj_clbk.aspx" id="ifr_clbk" frameborder="0" height="100%" width="100%" scrolling="yes"></iframe>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td height="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="49" align="center" background="app/images/clbk_bg2.jpg"><span class="STYLE2">版权信息:合益软件</span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="5px"></td>
+                <td height="850" valign="top">
+                    <iframe src="app/list_jjhj.aspx" align="top" frameborder="0" scrolling="no" width="1440" height="100%"></iframe>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

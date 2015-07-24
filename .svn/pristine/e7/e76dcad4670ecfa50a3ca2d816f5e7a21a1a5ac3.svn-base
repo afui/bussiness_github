@@ -1,0 +1,56 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="znyj_index.aspx.cs" Inherits="znyj_index" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>社区智慧物业管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta http-equiv="refresh" content="1000">
+    <link href="/hyhtml/images/Hycss.css" rel="stylesheet" />
+    <link href="/hyhtml/css/btncss.css" rel="stylesheet" />
+ 
+        
+</head>
+<body>
+    <form id="fm13" runat="server">
+    <table width="100%" height="100%">
+        <tr>
+            <td align="center" id="td_clbk" runat="server"  visible="false">
+                <iframe border="0" frameborder="0" id="LeftIframeWin" name="LeftIframeWin" scrolling="yes"
+                                    src="znyj_clbk.aspx" style="height: 100%; visibility: inherit; width: 100%;
+                                    z-index: 2" framespacing="0" marginheight="0" marginwidth="0" noresize vspale="0">
+                                </iframe>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" id="td_rybk" runat="server" visible="false">
+                <iframe border="0" frameborder="0" id="Iframe1" name="LeftIframeWin" scrolling="yes"
+                                    src="znyj_rybk.aspx" style="height: 100%; visibility: inherit; width: 100%;
+                                    z-index: 2" framespacing="0" marginheight="0" marginwidth="0" noresize vspale="0">
+                                </iframe>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" id="td_znfx" runat="server" visible="false">
+                <iframe border="0" frameborder="0" id="Iframe2" name="LeftIframeWin" scrolling="yes"
+                                    src="znyj_znfx.aspx" style="height: 100%; visibility: inherit; width: 100%;
+                                    z-index: 2" framespacing="0" marginheight="0" marginwidth="0" noresize vspale="0">
+                                </iframe>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" id="td_jjhj" runat="server" visible="false">
+               <iframe border="0" frameborder="0" id="Iframe3" name="LeftIframeWin" scrolling="yes"
+                                    src="znyj_jjhj.aspx" style="height: 100%; visibility: inherit; width: 100%;
+                                    z-index: 2" framespacing="0" marginheight="0" marginwidth="0" noresize vspale="0">
+                                </iframe>
+            </td>
+        </tr>
+        
+    </table>
+    <div style="display: none;">
+       
+    </div>
+    </form>
+</body>
+</html>

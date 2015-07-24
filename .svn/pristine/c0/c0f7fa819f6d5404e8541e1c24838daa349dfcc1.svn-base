@@ -1,0 +1,245 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="main_config.aspx.cs" ValidateRequest="false"
+    Inherits="SysManage_main_config" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>系统设置</title>
+    <link type="text/css" rel="stylesheet" href="../images/index/scripts/ui/skins/Aqua/css/ligerui-all.css" />
+    <link type="text/css" rel="stylesheet" href="../images/index/css/style.css" />
+    <script type="text/javascript" src="../images/index/scripts/jquery/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="../images/index/scripts/jquery/jquery.form.js"></script>
+    <script type="text/javascript" src="../images/index/scripts/jquery/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../images/index/scripts/jquery/messages_cn.js"></script>
+    <script type="text/javascript" src="../images/index/scripts/ui/js/ligerBuild.min.js"></script>
+    <script type="text/javascript" src="../images/index/js/function.js"></script>
+    <script type="text/javascript">
+        //表单验证
+        $(function () {
+            $("#form1").validate({
+                invalidHandler: function (e, validator) {
+                    parent.jsprint("有 " + validator.numberOfInvalids() + " 项填写有误，请检查！", "", "Warning");
+                },
+                errorPlacement: function (lable, element) {
+                    //可见元素显示错误提示
+                    if (element.parents(".tab_con").css('display') != 'none') {
+                        element.ligerTip({ content: lable.html(), appendIdTo: lable });
+                    }
+                },
+                success: function (lable) {
+                    lable.ligerHideTip();
+                }
+            });
+        });
+    </script>
+</head>
+<body class="mainbody">
+    <form id="form1" runat="server">
+    <div class="navigation">
+        <a href="javascript:history.go(-1);" class="back">后退</a>首页 &gt; 系统管理 &gt; 系统设置</div>
+    <div id="contentTab">
+        <ul class="tab_nav">
+            <li class="selected"><a onclick="tabs('#contentTab',0);" href="javascript:void(0);">
+                基本设置</a></li>
+            <li style="display:none;"><a onclick="tabs('#contentTab',1);" href="javascript:void(0);">邮箱设置</a></li>
+        </ul>
+        <div class="tab_con" style="display: block;">
+            <table class="form_table">
+                <col width="180px">
+                <col>
+                <tbody>
+                    
+                    <tr style="display:none;">
+                        <th>
+                            是否开启用户登录：
+                        </th>
+                        <td>
+                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal"
+                                RepeatLayout="Flow">
+                                <asp:ListItem Value="0" Selected="True">是</asp:ListItem>
+                                <asp:ListItem Value="1">否</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                        <th>
+                            是否允许用户注册：
+                        </th>
+                        <td>
+                            <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal"
+                                RepeatLayout="Flow">
+                                <asp:ListItem Value="0" Selected="True">是</asp:ListItem>
+                                <asp:ListItem Value="1">否</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            租房信息自动下架时间：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="TextBox1" runat="server" Width="100" CssClass="txtInput normal"></asp:TextBox>天&nbsp;&nbsp;&nbsp;&nbsp;注意：设置为0即永不下架
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <th>
+                            SEO标题：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="txtseotitle" runat="server" Width="700px" CssClass="txtInput normal"
+                                MaxLength="150"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            SEO关健字：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="txtseokeywords" runat="server" Width="700px" CssClass="txtInput normal"
+                                MaxLength="150"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            SEO描述：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="txtseodescription" runat="server" Width="700px" TextMode="MultiLine"
+                                Height="80" CssClass="txtInput normal" MaxLength="250"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            网站底部信息：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="txtBottom" runat="server" Width="700px" TextMode="MultiLine"
+                                Height="100" CssClass="txtInput normal"></asp:TextBox>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab_con" style="display:none;">
+            <table class="form_table">
+                <col width="150px">
+                <col>
+                <tbody>
+                    <tr>
+                        <th>
+                            注册是否需邮箱验证：
+                        </th>
+                        <td>
+                            <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatDirection="Horizontal"
+                                RepeatLayout="Flow">
+                                <asp:ListItem Value="0" Selected="True">是</asp:ListItem>
+                                <asp:ListItem Value="1">否</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                        <th>
+                            租房信息发布是否需审核：
+                        </th>
+                        <td>
+                            <asp:RadioButtonList ID="RadioButtonList4" runat="server" RepeatDirection="Horizontal"
+                                RepeatLayout="Flow">
+                                <asp:ListItem Value="0">是</asp:ListItem>
+                                <asp:ListItem Value="1" Selected="True">否</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            STMP服务器：
+                        </th>
+                        <td>
+                            <asp:TextBox ID="emailstmp" runat="server" CssClass="txtInput normal" MaxLength="50"></asp:TextBox><label>*</label>
+                        </td>
+                        <th>
+                            SMTP端口：
+                        </th>
+                        <td>
+                            <asp:TextBox ID="emailport" runat="server" CssClass="txtInput normal" MaxLength="50">25</asp:TextBox><label>*</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            邮箱地址：
+                        </th>
+                        <td>
+                            <asp:TextBox ID="emailfrom" runat="server" CssClass="txtInput normal" MaxLength="50"></asp:TextBox><label>*</label>
+                        </td>
+                        <th>
+                            邮箱密码：
+                        </th>
+                        <td>
+                            <asp:TextBox ID="emailpassword" runat="server" CssClass="txtInput normal" MaxLength="50"></asp:TextBox><label>*</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            注册回复主题：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailtitle1" runat="server" CssClass="txtInput normal" MaxLength="250"
+                                Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            注册回复内容：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailcontent1" runat="server" CssClass="txtInput normal" TextMode="MultiLine"
+                                Height="60" Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            找回密码主题：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailtitle2" runat="server" CssClass="txtInput normal" MaxLength="250"
+                                Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            找回密码内容：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailcontent2" runat="server" CssClass="txtInput normal" TextMode="MultiLine"
+                                Height="60" Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th>
+                            租售房发邮主题：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailtitle3" runat="server" CssClass="txtInput normal" MaxLength="250"
+                                Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            租售房发邮内容：
+                        </th>
+                        <td colspan="3">
+                            <asp:TextBox ID="emailcontent3" runat="server" CssClass="txtInput normal" TextMode="MultiLine"
+                                Height="60" Width="85%"></asp:TextBox>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="foot_btn_box">
+            <asp:Button ID="btnSubmit" runat="server" Text="提交保存" CssClass="btnSubmit" OnClick="btnSubmit_Click" />
+        </div>
+    </div>
+    <div style="display: none">
+        ID：<input id="txtid" runat="server" value="" /><br />
+        新增或修改：<input id="txtop" runat="server" value="" /><br />
+    </div>
+    </form>
+</body>
+</html>

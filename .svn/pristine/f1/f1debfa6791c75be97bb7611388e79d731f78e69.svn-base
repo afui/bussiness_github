@@ -1,0 +1,63 @@
+body {
+	margin: 0px;
+	color: #333333;
+	line-height: 20px;
+}
+body,td,th {font-size: 12px;}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+
+#lantern_slide {
+	OVERFLOW: hidden; padding-left:5px; padding-top:5px; WIDTH: 280px; HEIGHT: 177px
+}
+
+#bimg {
+	FILTER: progid:DXImageTransform.Microsoft.Fade ( duration=0.5,overlap=1.0 ); OVERFLOW: hidden; HEIGHT: 177px
+}
+#info {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+#info1 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.lkff1
+{
+    WIDTH: 270px;HEIGHT: 70px
+}
+.lkff1 a:link {color: #1742C1;	text-decoration: none;}
+.lkff1 a:visited {	color: #1742C1;	text-decoration: none;}
+.lkff1 a:hover {color: #FF9001;text-decoration: none;}
+.lkff1 a:active {color: #FF9001;text-decoration: none;}
+
+#simg {
+	PADDING-LEFT: 9px
+}
+#simg DIV {
+	FONT-SIZE: 12px; BACKGROUND: #343434; FLOAT: left; WIDTH: 18px; CURSOR: pointer; COLOR: #d6d6d6; LINE-HEIGHT: 18px; MARGIN-RIGHT: 1px; HEIGHT: 18px; TEXT-ALIGN: center
+}
+#simg .f1 {
+	BACKGROUND: #8f8f8f
+}
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+.lkff {
+	WIDTH: 150px
+}
+#font_hd {
+	MARGIN-TOP: 3px; BACKGROUND: #fff; WIDTH: 100%; HEIGHT: 40px
+}
+#font_hd TD {
+	OVERFLOW: hidden; HEIGHT: 25px
+}
+.pic {
+	OVERFLOW: hidden
+}
+
+#font_hd TD A {
+	FONT-SIZE: 12px; WIDTH: 150px; LINE-HEIGHT: 20px; HEIGHT: 20px
+}

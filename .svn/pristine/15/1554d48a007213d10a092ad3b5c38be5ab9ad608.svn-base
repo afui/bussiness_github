@@ -1,0 +1,107 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="znyj_znfx.aspx.cs" Inherits="iportal_app_znyj_clbk" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>智能分析</title>
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" bgcolor="#CFF1F3" align="center">
+                <iframe src="iframe/ifr_znyj_znfx.aspx" align="center" frameborder="0" scrolling="no"
+                    width="98%" height="582"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top"  align="center"  bgcolor="#CFF1F3" height="415">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="98%">
+                            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="42">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="20" height="25" valign="bottom">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="80%" valign="bottom">
+                                                    <img src="images/clbk_bjxxlb.jpg" width="119" height="19" />
+                                                </td>
+                                                <td valign="bottom">
+                                                    <span class="STYLE5">当前发现预警信息</span> <span class="STYLE1">30</span> <span class="STYLE5">
+                                                        条</span>
+                                                </td>
+                                                <td width="50" valign="bottom" class="STYLE5">
+                                                    更多&gt;&gt;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFFF">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="2">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                            <tr>
+                                                <td height="33" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    预警类型
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警时间
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警地点
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警点位
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    处理结果
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" class="STYLE5">
+                                                    智能分析(车辆违停、区域入侵、俳徊、遗留物品、快速奔跑、穿越围栏等)
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    2015年3月1日 15：40分30秒
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    桂花园
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    南门进口摄像机
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    已处理/未处理
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="10">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

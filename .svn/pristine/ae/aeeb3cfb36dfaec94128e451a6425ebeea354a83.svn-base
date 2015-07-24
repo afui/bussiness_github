@@ -1,0 +1,555 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="test.aspx.cs" Inherits="test" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="NBCEI.Tour.AuthMana.Web.AuthMana.User"
+    MasterPageFile="~/MainInfo.Master" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="/css/css.css" rel="stylesheet" type="text/css" />
+    <link href="/css/user.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            overflow-x: hidden;
+            background: none;
+        }
+        #zlws_page
+        {
+            width: 100%;
+        }
+        /*资料完善-->标题*/
+        #zlws_page .wsbt
+        {
+            color: #333;
+            font-family: "微软雅黑";
+            font-size: 14px;
+            line-height: 35px;
+            float: left;
+            height: 35px;
+            width: auto;
+        }
+        
+        
+        /*资料完善-->个人信息*/
+        #zlws_page #zlxx_border
+        {
+            width: auto;
+            border-left: 1px solid #fdd1aa;
+            border-right: 1px solid #fdd1aa;
+        }
+        /*边框*/
+        #zlxx_border .user_xx
+        {
+            width: auto;
+            padding: 15px 30px;
+        }
+        #zlxx_border .user_xx .user_img
+        {
+            padding: 5px;
+            border: 1px solid #ccc;
+            background: #fff;
+            float: left;
+        }
+        #zlxx_border .user_xx .user_img img
+        {
+            width: 100%;
+        }
+        #zlxx_border .user_xx .user_bt
+        {
+            float: left;
+            width: 100%;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fe8417;
+            border-bottom: 1px solid #e5e5e5;
+            line-height: 35px;
+        }
+        
+        
+        /*资料完善-->用户基本信息、旅行社管理*/
+        #zlws_page #box_zlxx
+        {
+            width: auto;
+            padding: 0px;
+            border: 1px solid #fdd1aa;
+            border-top: none;
+            float: none;
+        }
+        /*边框*/
+        #box_zlxx td
+        {
+            line-height: 40px;
+        }
+        #user_table td
+        {
+            text-align: left;
+            width: 25%;
+        }
+        #box_zlxx .xbt
+        {
+            text-align: right;
+            line-height: 40px;
+            font-weight: bold;
+        }
+        #box_zlxx .table_bt
+        {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "微软雅黑";
+            text-align: center;
+            color: #333;
+            padding: 10px 0px;
+            border-top: 1px solid #fdd1aa;
+        }
+        #box_zlxx input.winput
+        {
+            width: 65%;
+            background: #fff;
+            border: 1px solid #ccc;
+            height: 24px;
+            line-height: 24px;
+            text-indent: 5px;
+        }
+        #box_zlxx span.xinghao
+        {
+            color: #ff0000;
+            padding-left: 1%;
+        }
+        #box_zlxx select.wselect
+        {
+            width: 65%;
+        }
+        #box_zlxx table
+        {
+        }
+        
+        
+        /*资料完善-->底部按钮*/
+        #zlws_page .bottom_btn
+        {
+            width: auto;
+            padding: 5px 0px;
+            border: 1px solid #fdd1aa;
+            border-top: none;
+            float: none;
+            background: #fff2ea;
+        }
+        /*边框*/
+        #zlws_page .bottom_btn .list_btn
+        {
+            margin: 0 auto;
+            float: none;
+            width: 130px;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        function ChangeDiv(divId, divName, zDivCount) {
+            for (i = 0; i <= zDivCount; i++) {
+                document.getElementById(divName + i).style.display = "none";
+                //将所有的层都隐藏 
+            }
+            document.getElementById(divName + divId).style.display = "block";
+            //显示当前层 
+        } 
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div style="width: 770px; overflow: hidden; margin-left: 250px">
+        <div id="zlws_page">
+            <div id="user_main_title">
+                <span class="main_t_l_bg"></span>
+                <div class="wsbt">
+                    资料完善</div>
+                <span class="main_t_r_bg"></span>
+            </div>
+            <div class="clearboth">
+            </div>
+            <div id="zlxx_border">
+                <div class="user_xx">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="10%" align="left">
+                                <div class="user_img">
+                                    <img src="http://nboa.nbtravel.gov.cn/PersonalPic/default/1.jpg" /></div>
+                            </td>
+                            <td width="2%">&nbsp;
+                                
+                            </td>
+                            <td width="80%">
+                                <div class="user_bt">
+                                    欢迎您：<asp:Literal ID="Literal1" runat="server"></asp:Literal></div>
+                                <div class="user_gl">
+                                    <asp:Literal ID="Literal2" runat="server"></asp:Literal></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clearboth">
+            </div>
+            <div id="box_zlxx">
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="user_table">
+                    <tr>
+                        <td colspan="4" class="table_bt">
+                            用户基本信息
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="xbt">
+                            帐号：
+                        </td>
+                        <td>
+                          <asp:Label ID="txtUserAccName" runat="server"></asp:Label>
+                        </td>
+                        <td class="xbt">
+                            名称：
+                        </td>
+                        <td>
+                           <asp:Label ID="txtUserName" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="xbt">
+                            电子邮箱：
+                        </td>
+                        <td>
+                           <asp:Label ID="txtEmail" runat="server"></asp:Label>
+                        </td>
+                        <td class="xbt">
+                            联系电话：
+                        </td>
+                        <td>
+                           <asp:Label ID="txtPhone" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="xbt">
+                            所在地：
+                        </td>
+                        <td>
+                           <asp:Label ID="txtArea"></asp:Label>
+                        </td>
+                        <td class="xbt">
+                            创建时间：
+                        </td>
+                        <td>
+                           <asp:Label ID="txtTime" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="xbt">
+                            通讯地址：
+                        </td>
+                        <td colspan="3">
+                           <asp:Label ID="txtAddress" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                        <td class="table_bt">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background: none; text-align: left; color: #333; font-weight: bold; border-right: 1px solid #e5e5e5;
+                            width: 375px;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;请完善您的资料！以便日后业务沟通，谢谢！
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table id="rdIndustry" onclick="getSelected(this.value)" border="0" style="border-style: None;">
+                                <tr>
+                                    <td>
+                                        <input id="txtPd" type="radio" name="txtPd" value="1" checked="checked"
+                                            onclick="JavaScript:ChangeDiv('0','JKDiv_',1)" /><label for="txtPd">旅行社</label>
+                                    </td>
+                                    <td>
+                                        <input id="txtPd" type="radio" name="txtPd" value="2" onclick="JavaScript:ChangeDiv('1','JKDiv_',1)" /><label
+                                            for="txtPd">旅游主管部门</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <div id="JKDiv_0">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="xbt">
+                                旅行社名称：
+                            </td>
+                            <td colspan="3" width="75%">
+                                <input name="txtTravelName" type="text" maxlength="50" id="txtTravelName"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                许可证号：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtPermitNo" type="text" maxlength="50" id="txtPermitNo"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                星级：
+                            </td>
+                            <td colspan="3">
+                                <select name="txtStar" id="txtStar" class="wselect">
+                                    <option value="无星级">无星级 </option>
+                                    <option value="★">★ </option>
+                                    <option value="★★">★★ </option>
+                                    <option value="★★★">★★★ </option>
+                                    <option value="★★★★">★★★★ </option>
+                                    <option value="★★★★★">★★★★★ </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                地区（县市区）：
+                            </td>
+                            <td colspan="3">
+                                <select name="txtArea" id="txtArea" class="wselect">
+                                    <option value="江东区">江东区 </option>
+                                    <option value="海曙区">海曙区 </option>
+                                    <option value="江北区">江北区 </option>
+                                    <option value="鄞州区">鄞州区 </option>
+                                    <option value="北仑">北仑 </option>
+                                    <option value="镇海">镇海 </option>
+                                    <option value="奉化">奉化 </option>
+                                    <option value="宁海">宁海 </option>
+                                    <option value="慈溪">慈溪 </option>
+                                    <option value="余姚">余姚 </option>
+                                    <option value="象山">象山 </option>
+                                    <option value="东钱湖">东钱湖 </option>
+                                    <option value="高新区">高新区 </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                电话：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtPhone" type="text" maxlength="50" id="txtPhone" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                            </td>
+                            <td colspan="3">
+                                格式：0574-88259911或88259911
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                传真：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtFax" type="text" maxlength="50" id="txtFax" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                            </td>
+                            <td colspan="3">
+                                格式：0574-88259911或88259911
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                邮编：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtZip" type="text" maxlength="50" id="txtZip" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                邮箱：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtEmail" type="text" maxlength="50" id="txtEmail" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                总经理：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtContact" type="text" maxlength="50" id="txtContact"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                联系手机：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtTelphone" type="text" maxlength="50" id="txtTelphone"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                企业地址：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtAddress" type="text" maxlength="50" id="txtAddress"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                公司网址：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtWebSite" type="text" maxlength="50" id="txtWebSite"
+                                    class="winput" />
+                            </td>
+                        </tr>
+                        <tr id="CheckTR">
+                            <td class="xbt">
+                                审核：
+                            </td>
+                            <td colspan="3">
+                                <table id="txtCheck" disabled="disabled" border="0">
+                                    <tr>
+                                        <td>
+                                            <span disabled="disabled">
+                                                <input id="txtCheck_0" type="radio" name="txtCheck" value="A" checked="checked" disabled="disabled" /><label
+                                                    for="txtCheck_0">待审核</label></span>
+                                        </td>
+                                        <td>
+                                            <span disabled="disabled">
+                                                <input id="txtCheck_1" type="radio" name="txtCheck" value="B" disabled="disabled" /><label
+                                                    for="txtCheck_1">通过</label></span>
+                                        </td>
+                                        <td>
+                                            <span disabled="disabled">
+                                                <input id="txtCheck_2" type="radio" name="txtCheck" value="C" disabled="disabled" /><label
+                                                    for="txtCheck_2">未通过</label></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="JKDiv_1" style="display: none;">
+                      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="xbt">单位名称：
+                            </td>
+                            <td colspan="3" width="75%">
+                                <input name="txtDwmz" type="text" maxlength="50" id="txtDwmz"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">地区（县市区）：
+                            </td>
+                            <td colspan="3">
+                                <select name="txtArea" id="txtArea" class="wselect">
+                                    <option value="江东区">江东区 </option>
+                                    <option value="海曙区">海曙区 </option>
+                                    <option value="江北区">江北区 </option>
+                                    <option value="鄞州区">鄞州区 </option>
+                                    <option value="北仑">北仑 </option>
+                                    <option value="镇海">镇海 </option>
+                                    <option value="奉化">奉化 </option>
+                                    <option value="宁海">宁海 </option>
+                                    <option value="慈溪">慈溪 </option>
+                                    <option value="余姚">余姚 </option>
+                                    <option value="象山">象山 </option>
+                                    <option value="东钱湖">东钱湖 </option>
+                                    <option value="高新区">高新区 </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td class="xbt">联系人姓名： </td>
+                          <td colspan="3"><input name="txtXm" type="text" maxlength="50" id="txtXm"
+                                    class="winput" />
+                            <span style="color: Red">*</span><span id="RequiredFieldValidator2"
+                                        style="color: Red; visibility: hidden;">请输入</span></td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">联系人职务：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtZw" type="text" maxlength="50" id="txtZw"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">联系人固话：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtGh" type="text" maxlength="50" id="txtGh" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">联系人手机：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtSj" type="text" maxlength="50" id="txtSj" class="winput" /><span
+                                    style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">
+                                邮箱：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtEmail" type="text" maxlength="50" id="txtEmail"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">单位网址：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtDwwz" type="text" maxlength="50" id="txtDwwz"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="xbt">公司地址：
+                            </td>
+                            <td colspan="3">
+                                <input name="txtGsdz" type="text" maxlength="50" id="txtGsdz"
+                                    class="winput" /><span style="color: Red">*</span>
+                            </td>
+                        </tr>                        
+                    </table>
+                </div>
+                <div id="xjcg">
+                    <div class="bottom_btn">
+                        <div class="list_btn">
+                            <input type="submit" name="StarHotelSave" value="保存" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;StarHotelSave&quot;, &quot;&quot;, true, &quot;StarHotel&quot;, &quot;&quot;, false, false))"
+                                id="StarHotelSave" class="save_btn" />
+                            <input class="dele_btn" type="reset" value="清空" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

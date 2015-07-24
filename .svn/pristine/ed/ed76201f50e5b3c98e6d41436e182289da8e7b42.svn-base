@@ -1,0 +1,150 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using TPortalClass;
+
+public partial class ggdy_Hy_TreeForSetRole : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (this.Session["uid"].ToString() == "")
+        {
+            this.Response.Redirect("../login.aspx");
+        }
+        if (!this.IsPostBack)
+        {
+            string ls_roleid = "";
+            string ls_roleusers = "";
+            HyRoleuser HyRoleuser = new HyRoleuser();
+            if (this.Request.QueryString["roleid"] != null)
+            {
+                ls_roleid = this.Request.QueryString["roleid"].ToString();
+                //得到该权限下边已经配置的人员
+                HyRoleuser.hy_roleid = ls_roleid;
+                DataTable dtjudeg = HyRoleuser.Getroleusersbyroleid(ls_roleid);
+                if (dtjudeg.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dtjudeg.Rows.Count; i++)
+                    {
+                        ls_roleusers += "," + dtjudeg.Rows[i]["hy_userid"].ToString();
+                    }
+                    ls_roleusers += ",";
+                }
+            }
+
+            Response.Write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+            Response.Write("<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"zh-cn\">");
+            Response.Write("<Head><Title>人员列表</Title>");
+            Response.Write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\">");
+            Response.Write("<meta name=\"generator\" content=\"editplus\" />");
+            Response.Write("<link type=\"text/css\" rel=\"stylesheet\" href=\"hyhtml/ltree/resources/css/lTREE.checkbox.css\" />");
+            Response.Write("<style type=\"text/css\">");
+            Response.Write("#lTREEMenuDEMO {border:1px solid #ccc;margin:3px;padding:3px;}");
+            Response.Write("#infoBox {position:absolute;left:450px;top:40px;border:1px solid #ccc;width:400px;padding:0 10px;font-family:\"宋体\",Geneva,Arial,sans-serif;line-height:150%;}");
+            Response.Write("#debugMSG strong {color:#f00;}");
+            Response.Write("</style>");
+            Response.Write("<!--[if IE 6]>");
+            Response.Write("<script>");
+            Response.Write("document.execCommand(\"BackgroundImageCache\", false, true);");
+            Response.Write("</script>");
+            Response.Write("<![endif]-->");
+            Response.Write("</Head>");
+            Response.Write("<body style=\"padding:2px;\">");
+            Response.Write("<div class=\"lTREEMenu lTREENormal\" id=\"lTREEMenuDEMO\">");
+            Response.Write("<dl>");
+            Response.Write("<dd><input type=\"checkbox\" name=\"SelAll\" value=\"全选\" onclick=\"SelectAll();\" style=\"width:13;\"> <b>人员列表</b>");
+            Response.Write("<dl>");
+            //得到一级部门
+            //输出一级部门的人员
+            HyUser HyUser = new HyUser();
+            DataTable dtuser = HyUser.GetUsersQY();
+            if (dtuser.Rows.Count > 0)
+            {
+                for (int j = 0; j < dtuser.Rows.Count; j++)
+                {
+                    string ls_uid = dtuser.Rows[j]["hy_sysuid"].ToString();
+                    string ls_uname = dtuser.Rows[j]["hy_sysname"].ToString();
+                    Response.Write("<dt class=\"folderClose\">");
+                    //判断已选中
+                    if (ls_roleusers.Contains("," + ls_uid + ","))
+                    {
+                        Response.Write("<input type=\"checkbox\" checked=\"checked\" name=\"User" + ls_uid + "_subuser\" value=\"");
+                        Response.Write(ls_uid + "|" + ls_uname + "\" text=\"" + ls_uname + "\">");
+                        Response.Write(ls_uname);
+                        Response.Write("</dt>");
+                    }
+                    else
+                    {
+                        Response.Write("<input type=\"checkbox\" name=\"User" + ls_uid + "_subuser\" value=\"");
+                        Response.Write(ls_uid + "|" + ls_uname + "\" text=\"" + ls_uname + "\">");
+                        Response.Write(ls_uname);
+                        Response.Write("</dt>");
+                    }
+                }
+            }
+            ////输出一级部门尾部
+            Response.Write("</dl>");
+            Response.Write("</dd>");
+            Response.Write("</dl>");
+            Response.Write("</div>");
+            Response.Write("<script type=\"text/javascript\" src=\"hyhtml/ltree/js/lTREE.js\"></script>");
+            Response.Write("<script class=\"lJSFDemo\" type=\"text/javascript\"> ");
+            Response.Write("        var lTree = new lTREE();");
+            Response.Write("        lTree.config({");
+            Response.Write("	        path	: \"dl dd\"");
+            Response.Write("        });");
+            Response.Write("        lTree.tagName({");
+            Response.Write("	        folder	: \"DD\",");
+            Response.Write("	        file	 	: \"DT\"");
+            Response.Write("        });");
+            Response.Write("        lTree.className({");
+            Response.Write("	        folderClose	: \"folderClose\",");
+            Response.Write("	        lastChild	 	: \"lastChild\"");
+            Response.Write("        });");
+            Response.Write("var t=new Date(),timer=[];");
+            Response.Write("lTree.build(\"lTREEMenuDEMO\");");
+            Response.Write("timer.push(new Date()-t);");
+            /**************************************
+            * 给树内所有复选框添加相应事件 *
+            * Start */
+            Response.Write("function chkAll(){");
+            Response.Write("var a=this.parentNode.getElementsByTagName(\"input\"),b=this.checked;");
+            Response.Write("for(var i=0,l=a.length; i<l;i++) {");
+            Response.Write("a[i].checked=b;");
+            Response.Write("}");
+            Response.Write("}");
+            Response.Write("function chkOne(){");
+            Response.Write("var a=this,b=this.checked,p=lDOM.$(\"lTREEMenuDEMO\"),pn=null;");
+            Response.Write("while(a.tagName!=\"DD\" && a!=p) a=a.parentNode;");
+            Response.Write("pn=a.getElementsByTagName(\"input\");");
+            Response.Write("if(b){");
+            Response.Write("for(var i=1,l=pn.length; i<l;i++) {");
+            Response.Write("if(!pn[i].checked){");
+            Response.Write("b=false;");
+            Response.Write("break;");
+            Response.Write("}");
+            Response.Write("}");
+            Response.Write("}");
+            Response.Write("pn[0].checked=b;");
+            Response.Write("}");
+            Response.Write("var arrCHK=lDOM.find(\"dl dd input\",lDOM.$(\"lTREEMenuDEMO\"),{type:\"checkbox\"});");
+            Response.Write("arrCHK.each(function(s){");
+            Response.Write("if(s.parentNode.tagName==\"DT\"){");
+            Response.Write("s.onclick=chkOne;");
+            Response.Write("} else {");
+            Response.Write("s.onclick=chkAll;");
+            Response.Write("}");
+            Response.Write("});");
+            Response.Write("      </script>");
+            Response.Write("</Body></HTML>");
+        }
+    }
+
+}

@@ -1,0 +1,103 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pchage.aspx.cs" Inherits="pchage" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title></title>
+    <link href="/css/tpbk-activity.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" name="form1" runat="server">
+    <div id="lantern_slide">
+        <table class="ge" id="ge" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr valign="top">
+                    <td class="pic" id="bimg">
+                        <%=ls_pic %>
+                        <table id="font_hd" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr valign="top">
+                                    <td class="lkff1" id="info1" colspan="2">
+                                        <%=ls_jjnr %>
+                                    </td>
+                                </tr>
+                                <tr valign="top">
+                                    <td class="lkff" id="info">
+                                    </td>
+                                    <td id="simg">
+                                        <%=ls_num %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <script type="text/javascript">
+                            function getid(o) { return (typeof o == "object") ? o : document.getElementById(o); }
+                            function getNames(obj, name, tij) {
+                                var plist = getid(obj).getElementsByTagName(tij);
+                                var rlist = new Array();
+                                for (i = 0; i < plist.length; i++) { if (plist[i].getAttribute("name") == name) { rlist[rlist.length] = plist[i]; } }
+                                return rlist;
+                            }
+
+                            function fiterplay(obj, num, t, name, c1, c2) {
+                                var fitlist = getNames(obj, name, t);
+                                for (i = 0; i < fitlist.length; i++) {
+                                    if (i == num) {
+                                        fitlist[i].className = c1;
+                                    }
+                                    else {
+                                        fitlist[i].className = c2;
+                                    }
+                                }
+                            }
+                            function play(obj, num) {
+                                var s = getid('simg');
+                                var i = getid('info');
+                                var b = getid('bimg');
+                                var k = getid('info1');
+                                try {
+                                    with (b) {
+                                        filters[0].Apply();
+                                        fiterplay(b, num, "div", "f", "dis", "undis");
+                                        fiterplay(s, num, "div", "f", "", "f1");
+                                        fiterplay(i, num, "div", "f", "dis", "undis");
+                                        fiterplay(k, num, "div", "f", "dis", "undis");
+                                        filters[0].play();
+                                    }
+                                }
+                                catch (e) {
+                                    fiterplay(b, num, "div", "f", "dis", "undis");
+                                    fiterplay(s, num, "div", "f", "", "f1");
+                                    fiterplay(i, num, "div", "f", "dis", "undis");
+                                    fiterplay(k, num, "div", "f", "dis", "undis");
+                                }
+                            }
+
+                            var autoStart = 0;
+                            var n = 0; var s = getid("simg");
+                            var x = getNames(s, "f", "div");
+                            function clearAuto() { clearInterval(autoStart); };
+                            function setAuto() { autoStart = setInterval("auto(n)", 3000) }
+                            function auto() {
+                                n++;
+                                if (n > (x.length - 1)) {
+                                    n = 0;
+                                    //clearAuto();
+                                }
+                                play(x[n], n);
+
+                            }
+                            function ppp() {
+                                setAuto();
+                            }
+                            ppp();
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,178 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GISpt.aspx.cs" Inherits="iportal_app_GISpt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>GIS平台</title>
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+    <link href="../css/css-cn.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function showImg(strImg) {
+            document.getElementById('img_dt').setAttribute("src", strImg);
+        }
+    </script>
+</head>
+<body bgcolor="#CFF1F3">
+    <form id="form1" runat="server">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="1%"></td>
+                <td width="30%" valign="top">
+                    <table border="0" cellspacing="0" width="98%" cellpadding="0">
+                        <tr>
+                            <td align="center" height="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="H9B">基本信息
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" height="10"></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF">
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                                <table width="95%" border="0" align="center" class="border-table" cellpadding="0" cellspacing="0" bordercolor="#666666">
+                                    <tr>
+                                        <td align="center" width="40%" class="STYLE5">业主姓名：
+                                        </td>
+                                        <td align="center" width="60%" class="STYLE5">张三
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" width="40%" class="STYLE5">住户号：
+                                        </td>
+                                        <td align="center" width="60%" class="STYLE5">001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" width="40%" class="STYLE5">车牌号：
+                                        </td>
+                                        <td align="center" width="60%" class="STYLE5">浙B123456
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="STYLE5">小区名称：
+                                        </td>
+                                        <td align="center" class="STYLE5">智慧社区
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="STYLE5">房屋类型：
+                                        </td>
+                                        <td align="center" class="STYLE5">常住
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="1" class="icon-btn">停车位分布情况
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="1" class="icon-btn">主出入口
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" height="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="H9B">社区设备位点
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" height="10"></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#FFFFFF">
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                                <table width="60%" border="0" align="center" class="border-table" cellpadding="0" cellspacing="0" bordercolor="#666666">
+                                    <tr>
+                                        <td align="center" class="icon-btn">视频监控点
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">道闸点位
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">窨井点位
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">电梯点位
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">安全通道/消防通道
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">消防栓点位
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">通讯线路
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" class="icon-btn">强电线路
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td height="12"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="10"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="center" valign="top">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="5"></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><a href="javascript:;" onclick="showImg('images/dxck.jpg')" class="btn">地下车库地图区域 </a>&nbsp;&nbsp;<a href="javascript:;" onclick="showImg('images/gis.png')" class="btn">社区GIS地图区域</a></td>
+                        </tr>
+                        <tr>
+                            <td height="5"></td>
+                        </tr>
+                    </table>
+                    <img id="img_dt" src="images/dxck.jpg" width="780" height="625" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

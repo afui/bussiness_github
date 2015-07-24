@@ -1,0 +1,109 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Hy_SetRoleByRole.aspx.cs"
+    Inherits="ggdy_Hy_SetRoleByRole" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>选择权限人员</title>
+    <link href="hyhtml/images/Hycss.css" rel="stylesheet">
+    <link href="hyhtml/images/mainWin.css" rel="stylesheet">
+    <script language="JavaScript" src="hyhtml/ltree/js/DeptSelection.js"></script>
+    <script type="text/javascript">
+        //保存
+        function submitform() {
+            var ls_temp = GetValues();
+            var lv_temp = ls_temp.split("|");
+            var ls_value = lv_temp[0];
+            var ls_text = lv_temp[1];
+            document.forms[0].txtuserids.value = ls_value;
+            document.forms[0].txtusernames.value = ls_text;
+            document.forms[0].Button_Save.click();
+        }
+    </script>
+    <base target="_self">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginheight="0"
+    marginwidth="0">
+    <form id="form1" runat="server">
+    <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" vlign="top">
+        <tr>
+            <td height="30" align="center" class="style1">
+                【按权限授权】
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top">
+                <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#cccccc">
+                    <tr>
+                        <td height="33" align="center" bgcolor="#D1E7FF">
+                            人员列表
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" bgcolor="#ffffff" height="300">
+                            <iframe frameborder="0" id="TreeStructWin" name="TreeStructWin" scrolling="yes" align="center"
+                                src="Hy_TreeForSetRole.aspx?roleid=<%=pis_roleid() %>" style="width: 100%; height: 100%;
+                                visibility: inherit; z-index: 2"></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="5">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td width="15" align="center">
+                        </td>
+                        <td width="52" align="center" class="btntools">
+                            <table width="40" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="4">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <input id="btn_return" type="button" name="btn_return" value=" 关 闭" onclick="self.close();"
+                                            class="btn7" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="15" align="center">
+                        </td>
+                        <td width="52" align="center" class="btntools">
+                            <table width="40" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="4">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <input id="Button1" type="button" name="btn_return" value=" 保 存" onclick="submitform();"
+                                            class="btn7" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="15" align="left">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div style="display: none;">
+        权限ID：<input id="txtroleid" runat="server" value="" /><br />
+        选择的人员系统名：<input id="txtuserids" runat="server" value="" /><br />
+        选择的人员中文名：<input id="txtusernames" runat="server" value="" /><br />
+        <asp:Button ID="Button_Save" runat="server" OnClick="Button_Save_Click" Text="修改保存" />
+    </div>
+    </form>
+</body>
+</html>

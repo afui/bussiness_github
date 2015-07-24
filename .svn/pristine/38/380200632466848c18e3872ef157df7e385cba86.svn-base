@@ -1,0 +1,223 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ifr_znyj_znfx.aspx.cs" Inherits="app_iframe_ifr_znyj_znfx" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../images/style.css" rel="stylesheet" />
+    <script src="../images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table border="0" bgcolor="#CFF1F3" height="800" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" valign="top" class="p5">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="10">
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" valign="middle">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <img src="../images/znfx_jktp.jpg" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="5" bgcolor="#FFFFFF">
+            </td>
+            <td width="30%" valign="top">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="42" align="left">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="25" valign="bottom">
+                                                    <div align="left">
+                                                        <img src="../images/clbk_bjxxxx.jpg" width="119" height="19" /></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFFF">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="70" height="25" align="left" valign="top" class="STYLE5">
+                                                    报警类型：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    智能分析-车辆违停(区域入侵、俳徊、遗留物品、快速奔跑、穿越围栏等)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    抓拍点位：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    桂花园中通道1号摄像机
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    小区名称：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    桂花园
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    区域：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    1号区域
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    抓拍时间：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    2015年3月1日 15：40分30秒
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    报警时间：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    2015年3月1日 15：40分31秒
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="10">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                    <img src="../images/znfx_jktp1.jpg" width="319" height="166" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="10">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="42" align="left">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="25" valign="bottom">
+                                                    <div align="left">
+                                                        <img src="../images/rybk_yjyy.jpg" width="78" height="18" /></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFFF">
+                                        <table width="15%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="70" height="25" align="left" valign="top" class="STYLE5">
+                                                    预警类型：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    智能分析-车辆违停(区域入侵、俳徊、遗留物品、快速奔跑、穿越围栏等)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" align="left" class="STYLE5">
+                                                    小区名称：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    桂花园
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" colspan="2" align="left" class="STYLE5">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="100">
+                                                                值班人员班长：
+                                                            </td>
+                                                            <td width="62">
+                                                                ***
+                                                            </td>
+                                                            <td width="45">
+                                                                电话：
+                                                            </td>
+                                                            <td width="96">
+                                                                13911111111
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="left" class="STYLE5">
+                                                    处理结果：
+                                                </td>
+                                                <td align="left" class="STYLE5">
+                                                    已处理
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="15%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="12">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

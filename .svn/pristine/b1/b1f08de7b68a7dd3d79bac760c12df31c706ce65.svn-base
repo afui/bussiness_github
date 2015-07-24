@@ -1,0 +1,31 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="yhclgl_index.aspx.cs" Inherits="iportal_app_yhclgl_index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+               <a href="yhclgl_yhgl.aspx">社区用户</a>
+            </td>
+            <td>
+               <a href="yhclgl_clgl.aspx"> 社区车辆</a>
+            </td>
+        </tr>
+        <tr>
+            
+            <td>
+                <a href="clgl_xz.aspx">综合查询</a>
+            </td>
+            <td>
+                <a href="clgl_xz.aspx">统计</a>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

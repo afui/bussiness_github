@@ -1,0 +1,171 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+.content {
+	FONT: 9pt/14pt "宋体"
+}
+A:link {
+	COLOR: #0000cc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #000066; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+SELECT {
+	FONT-SIZE: 9pt; CURSOR: default; COLOR: buttontext; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #f7f7f7
+}
+TEXTAREA {
+	CURSOR: default; COLOR: buttontext; BACKGROUND-COLOR: #f7f7f7
+}
+.style_1 {
+	PADDING-LEFT: 12px; FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #1c1c1c; FONT-FAMILY: "宋体"
+}
+.style_2 {
+	FONT-SIZE: 12px; COLOR: #013799; FONT-FAMILY: "宋体"
+}
+.style_3 {
+	FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "宋体"
+}
+.style_4 {
+	FONT-SIZE: 14px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #000000; FONT-FAMILY: "宋体"
+}
+.style_left {
+	PADDING-RIGHT: 12px; FONT-SIZE: 12px; COLOR: #424242; FONT-FAMILY: "宋体"
+}
+.sytel_hui {
+	FONT-SIZE: 12px; COLOR: #424242; FONT-FAMILY: "宋体"
+}
+.style_5 {
+	PADDING-LEFT: 14px; FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #1476a5; FONT-FAMILY: "宋体"
+}
+.style_6 {
+	FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #333230; FONT-FAMILY: "宋体"
+}
+.style_7 {
+	FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #6a6a6a; FONT-FAMILY: "宋体"
+}
+.Info {
+	PADDING-RIGHT: 10px; OVERFLOW-Y: auto; PADDING-LEFT: 10px; SCROLLBAR-FACE-COLOR: #f9ece3; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #e7d7be; SCROLLBAR-SHADOW-COLOR: #e7d7be; SCROLLBAR-3DLIGHT-COLOR: #e7d7be; TEXT-INDENT: 24px; LINE-HEIGHT: 25px; SCROLLBAR-ARROW-COLOR: #e7d7be; PADDING-TOP: 10px; SCROLLBAR-TRACK-COLOR: #e7d7be; SCROLLBAR-DARKSHADOW-COLOR: #e7d7be; HEIGHT: 342px; TEXT-ALIGN: right; padding_bottom: 10px
+}
+.style_8 {
+	FONT-SIZE: 14px; COLOR: #f47c01; FONT-FAMILY: "宋体"
+}
+.select1 {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: middle; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+.text1 {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: middle; COLOR: #000000; FONT-FAMILY: "宋体"; border:1px solid #8E9BA3
+}
+.tacheshow {
+	PADDING-LEFT: 12px; FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #1c1c1c; FONT-FAMILY: "宋体"
+}
+.itemshow {
+	PADDING-LEFT: 12px; FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #1c1c1c; FONT-FAMILY: "宋体"
+}
+.bigtitleshow {
+	FONT-SIZE: 15px; COLOR: #f47c01; FONT-FAMILY: "宋体"
+}
+.Table1 {
+	BORDER-RIGHT: #67AFFF 1px solid; BORDER-TOP: #67AFFF 1px solid; BORDER-LEFT: #67AFFF 1px solid; BORDER-BOTTOM: #67AFFF 1px solid
+}
+.Table2 {
+	BORDER-RIGHT: #67AFFF 1px solid; BORDER-LEFT: #67AFFF 1px solid; BORDER-BOTTOM: #67AFFF 1px solid
+}
+.TdcellHead {
+	FONT-SIZE: 12px; COLOR: #013799; FONT-FAMILY: "宋体"
+}
+.TdcellList {
+	FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #333230; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #f6f6f6
+}
+.TrList {
+	FONT-SIZE: 12px; FILTER: DropShadow(Color=ffffff, OffX=1, OffY=1, Positive=1); COLOR: #333230; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #f6f6f6
+}
+.treeshow {
+	FONT-SIZE: 9pt; FONT-FAMILY: 宋体
+}
+.Tdcellleft {
+	FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #ff0000; BORDER-BOTTOM-COLOR: #ff0000; VERTICAL-ALIGN: middle; COLOR: #1c1c1c; BORDER-TOP-COLOR: #ff0000; FONT-FAMILY: 宋体; BACKGROUND-COLOR: #DFEEFF; BORDER-RIGHT-COLOR: #ff0000
+}
+.Tdcellright {
+	FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #ffffff; BORDER-BOTTOM-COLOR: #ffffff; VERTICAL-ALIGN: middle; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: #ffffff; FONT-FAMILY: 宋体; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-COLOR: #ffffff; BORDER-BOTTOM-STYLE: solid
+}
+.btnTurnPage {
+	FONT-SIZE: 12px; CURSOR: hand; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+.btn {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(an_bj.gif); BORDER-LEFT: 0px; WIDTH: 27px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; HEIGHT: 16px
+}
+.btn2 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj2.gif); VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 47px; COLOR: #000000; LINE-HEIGHT: 22px; BORDER-BOTTOM: medium none; FONT-FAMILY: 宋体; HEIGHT: 22px; TEXT-ALIGN: center
+}
+.btn3 {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj3.gif); VERTICAL-ALIGN: middle; BORDER-LEFT: medium none; WIDTH: 66px; COLOR: #000000; LINE-HEIGHT: 22px; BORDER-BOTTOM: medium none; FONT-FAMILY: 宋体; HEIGHT: 22px; TEXT-ALIGN: center
+}
+.btn4 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(an_bj4.gif); BORDER-LEFT: 0px; WIDTH: 63px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; HEIGHT: 18px
+}
+.btn5 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BACKGROUND-IMAGE: url(an_bj5.gif); BORDER-LEFT: 0px; WIDTH: 70px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; HEIGHT: 29px
+}
+.btn6 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj6.gif); BORDER-LEFT: 0px; WIDTH: 59px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 29px
+}
+.btn7 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj7.gif); BORDER-LEFT: 0px; WIDTH: 66px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 21px
+}
+.btn71 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj71.gif); BORDER-LEFT: 0px; WIDTH: 80px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 21px
+}
+.btn72 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj72.gif); BORDER-LEFT: 0px; WIDTH: 100px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 21px
+}
+.btn8 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj8.gif); BORDER-LEFT: 0px; WIDTH: 80px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 29px
+}
+.btn9 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(an_bj9.gif); BORDER-LEFT: 0px; WIDTH: 100px; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: 0px; FONT-FAMILY: 宋体; HEIGHT: 29px
+}
+.tr-over {
+	FONT-SIZE: 12px; BACKGROUND-IMAGE: none; FONT-STYLE: normal; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #e1ecf3
+}
+.tr-out {
+	FONT-SIZE: 12px; BACKGROUND-IMAGE: none; COLOR: #f6f6f6; FONT-FAMILY: "宋体"
+}
+.tb-left {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;BORDER-top: #67AFFF 1px solid
+}
+.tb1-print {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;BORDER-bottom: #67AFFF 1px solid;BORDER-top: #67AFFF 1px solid
+}
+.tb2-print {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;BORDER-top: #67AFFF 1px solid
+}
+.tb3-print {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;BORDER-bottom: #67AFFF 1px solid;BORDER-top: #67AFFF 1px solid
+}
+.tb4-print {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;
+}
+.tb5-print {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#D5E9FF,endColorStr=#ffffff);BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;
+}
+.tb6-print {
+	BACKGROUND-COLOR: #67AFFF;
+}
+.tb7-print {
+	BORDER-left: #67AFFF 1px solid;BORDER-right: #67AFFF 1px solid;
+}
+.tb8-left {
+	BACKGROUND-COLOR: #67AFFF ;
+}
+.tb1-main {
+	BACKGROUND-COLOR: #67AFFF ;
+}
+.tb1-main td {
+    padding:2px
+}

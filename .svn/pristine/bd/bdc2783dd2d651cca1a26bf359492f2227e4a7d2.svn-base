@@ -1,0 +1,49 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class center : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["uid"].ToString() == "")
+        {
+            this.Response.Redirect("login.aspx?url=" + this.Request.RawUrl.ToString());
+        }
+        else
+        {
+            TPortalClass.HySysuser HySysuser = new TPortalClass.HySysuser();
+            DataTable dt = HySysuser.Getdocbyid(this.Session["uid"].ToString());
+            if (dt.Rows.Count > 0)
+            {
+                lbluserinfo.Text = dt.Rows[0]["hy_sysname"].ToString();
+            }
+            TPortalClass.HySyssite HySyssite = new TPortalClass.HySyssite();
+            webname.Text = HySyssite.SiteName;
+            weburl.Text = HySyssite.host;
+            webcompany.Text = "宁波合益信息科技有限公司";
+            dbname.Text = HySyssite.dbname;
+            versions.Text = HySyssite.version;
+            //读取登录信息
+            TPortalClass.HySyslogs HySyslogs = new TPortalClass.HySyslogs();
+            DataTable dt_log = HySyslogs.Getlogs();
+            if (dt_log.Rows.Count > 0)
+            {
+                litIP.Text = dt_log.Rows[0]["hy_oppip"].ToString();
+            }
+            if (dt_log.Rows.Count > 1)
+            {
+                litBackIP.Text = dt_log.Rows[1]["hy_oppip"].ToString();
+                litBackTime.Text = dt_log.Rows[1]["hy_createtime"].ToString();
+            }
+        }
+       
+    }
+}

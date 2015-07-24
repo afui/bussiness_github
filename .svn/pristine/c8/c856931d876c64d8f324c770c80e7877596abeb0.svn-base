@@ -1,0 +1,282 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="list_jjhj.aspx.cs" Inherits="iportal_app_list_jjhj" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>紧急呼救</title>
+    <link href="images/style.css" rel="stylesheet" />
+    <script src="images/zhsq.js"></script>
+</head>
+<body>
+    <table width="1440" height="90" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="72" height="90" background="images/clbk_bg1.jpg">&nbsp;</td>
+            <td width="329" background="images/clbk_bg1.jpg">
+                <img src="images/clbk_xtmc.jpg" width="329" height="90" /></td>
+            <td width="1039" align="right" valign="bottom" background="images/clbk_bg1.jpg">
+                <table width="800" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="307" height="35" align="left">&nbsp;</td>
+                        <td width="28" align="left">
+                            <img src="images/clbk_zt_1.png" width="21" height="31" /></td>
+                        <td width="120" align="left" class="STYLE3">系统管理员</td>
+                        <td width="40" align="left">
+                            <img src="images/clbk_zt_2.png" width="32" height="30" /></td>
+                        <td width="100" align="left" class="STYLE3">在线10人</td>
+                        <td width="35" align="left">
+                            <img src="images/clbk_zt_3.png" width="24" height="21" /></td>
+                        <td width="120" align="left" class="STYLE3">您有新的消息（20）</td>
+                        <td width="50">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="5" colspan="3"></td>
+        </tr>
+    </table>
+    <table width="1440" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" bgcolor="CFF1F3">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+<td width="1077" align="center" valign="top" style="border-bottom: 1px solid #AFDDDB; border-top: 1px solid #AFDDDB; border-left: 1px solid #AFDDDB; border-right: 1px solid #AFDDDB"><table width="1055" border="0" cellpadding="0" cellspacing="10">
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#FFFFFF" class="bk">
+                                        <img src="images/jjhj_pmt.jpg" width="1055" height="678" /></td>
+                                </tr>
+                          </table>
+                      </td>
+                        <td width="5" bgcolor="#FFFFFF"></td>
+                        <td width="358" align="center" valign="top" class="bk">
+                            <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="30">
+                                        <img src="images/jjhj_bjxx.jpg" width="80" height="19" /></td>
+                                </tr>
+                            </table>
+                            <table width="344" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center" valign="top" bgcolor="#FFFFFF" class="bk">
+                                        <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="10"></td>
+                                            </tr>
+                                        </table>
+                                        <table width="329" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">库门S1-0002异物信息</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园内围墙S3-003设备故障</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内26幢前路灯故障</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内38幢603住户求救呼叫</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian2.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="37" align="center" background="images/jjhj_an1.jpg">
+                                                    <table width="301" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="35" align="left">
+                                                                <img src="images/jjhj_dian1.png" width="21" height="21" /></td>
+                                                            <td width="266" align="left" class="STYLE5">园区内车库B1-0012监控报警</td>
+                                                        </tr>
+                                                    </table>                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="4" align="center"></td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                </tr>
+                            </table>
+                      </td>
+                    </tr>
+              </table>
+            </td>
+        </tr>
+    </table>
+    <table width="1440" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td height="5"></td>
+        </tr>
+        <tr>
+            <td height="56" align="center" background="images/clbk_bg2.jpg"><span class="STYLE2">版权信息:合益软件&nbsp;&nbsp;&nbsp;&nbsp;联系电话:88886666 </span></td>
+        </tr>
+</table>
+</body>
+</html>

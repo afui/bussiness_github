@@ -1,0 +1,26 @@
+<script type="text/javascript" src="hyhtml/lhgdialog/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="hyhtml/lhgdialog/lhgdialog.min.js"></script>
+function openComplainXzhy()
+{
+   //var upUrl='url:/include/HySelectUser.aspx?'+pi_uid;
+   $.dialog({ 
+    title:'选择好友发直邮',
+    lock: true, 
+    max: false, 
+    min: false, 
+    width:'400px',
+    height:'450px',
+    background: '#FFF', /* 背景色 默认的遮罩背景色为:#DCE2F1浅蓝护眼色 */ 
+    opacity: 0.5,       /* 透明度 */ 
+    content: 'url:/include/HySelectUser.aspx',
+    icon: 'error.gif'
+    });
+
+}
+
+
+子文档中需要关闭：frameElement.api.close(); 
+刷新父页面并关闭   parent.location.reload();
+子文档中需要保存：
+// api.opener 为载加lhgdialog.min.js文件的页面的window对象
+    var api = frameElement.api, W = api.opener, D = W.document; 

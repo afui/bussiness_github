@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>车辆布控</title>
+
+
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="images/zhsq.js"></script>
+</head>
+
+
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    
+    <td valign="top" bgcolor="#CFF1F3">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td  align="center" valign="middle" class="p5"><table  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" valign="middle" bgcolor="#FFFFFF"><table  border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><img src="images/clbk_cltp.jpg"  /></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+          <td width="5" bgcolor="#FFFFFF"></td>
+          <td width="30%" valign="top"><table  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="42" align="left"><table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="25" valign="bottom"><div align="left"><img src="images/clbk_bjxxxx.jpg" width="119" height="19" /></div></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td align="center" bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="12"></td>
+                    </tr>
+                  </table>
+                    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="70" height="25" align="left" class="STYLE5">报警类型：</td>
+                      <td  align="left" class="STYLE5">车辆布控</td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="left" class="STYLE5">车牌号码：</td>
+                      <td align="left" class="STYLE5">picture</td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="left" class="STYLE5">车牌特写：</td>
+                      <td align="left" class="STYLE5">picture</td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">车辆类型：</td>
+                      <td align="left" class="STYLE5">小轿车</td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">车身颜色：</td>
+                      <td align="left" class="STYLE5">白色</td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">抓拍点位：</td>
+                      <td align="left" class="STYLE5">桂花园南门进摄像机</td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">车辆状态：</td>
+                      <td align="left" class="STYLE5">进桂花园南门</td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">抓拍时间：</td>
+                      <td align="left" class="STYLE5">2015年3月1日 15：40分25秒 </td>
+                    </tr>
+                    <tr>
+                      <td height="25" align="left" class="STYLE5">报警时间：</td>
+                      <td align="left" class="STYLE5">
+                        2015年3月1日 15：40分30秒 </td>
+                    </tr>
+                  </table>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="12"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                
+              </table></td>
+            </tr>
+            <tr>
+              <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="42" align="left"><table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="25" valign="bottom"><div align="left"><img src="images/clbk_bjxxxx.jpg" width="119" height="19" /></div></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                <tr>
+                  <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="12"></td>
+                      </tr>
+                    </table>
+                    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="70" height="25" align="left" class="STYLE5">布控车牌：</td>
+                        <td  align="left" class="STYLE5">浙BG770T</td>
+                        </tr>
+                      <tr>
+                        <td height="30" align="left" class="STYLE5">布控原因：</td>
+                        <td align="left" class="STYLE5">此车为盗抢车辆</td>
+                        </tr>
+                      <tr>
+                        <td height="30" align="left" class="STYLE5">联系单位：</td>
+                        <td align="left" class="STYLE5">宁波市公安局或其它单位</td>
+                        </tr>
+                      <tr>
+                        <td height="25" align="left" class="STYLE5">联系人：</td>
+                        <td align="left" class="STYLE5">****</td>
+                        </tr>
+                      <tr>
+                        <td height="25" align="left" class="STYLE5">联系电话：</td>
+                        <td align="left" class="STYLE5">13911111111</td>
+                        </tr>
+                      <tr>
+                        <td height="25" align="left" class="STYLE5">备注：</td>
+                        <td align="left" class="STYLE5">无</td>
+                        </tr>
+                      <tr>
+                        <td height="40" align="left">&nbsp;</td>
+                        <td align="left">&nbsp;</td>
+                        </tr>
+                      </table>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="12"></td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                <tr>
+                  <td height="10"></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table> </td>
+        </tr>
+      </table>
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="42"><table  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="20" height="25" valign="bottom">&nbsp;</td>
+                  <td width="172" valign="bottom"><img src="images/clbk_bjxxlb.jpg" width="119" height="19" /></td>
+                  <td valign="bottom"><span class="STYLE5">当前发现预警信息</span> <span class="STYLE1">30</span> <span class="STYLE5">条</span></td>
+                  <td width="50" valign="bottom" class="STYLE5">更多&gt;&gt;</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#FFFFFF"><table  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="2"></td>
+                </tr>
+              </table>
+                <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                  <tr>
+                    <td  height="33" align="center" bgcolor="7ECF72" class="STYLE4">预警类型</td>
+                    <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">报警时间</td>
+                    <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">报警地点</td>
+                    <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">报警点位</td>
+                    <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">处理结果</td>
+                  </tr>
+                  <tr>
+                    <td align="left" class="STYLE5">车辆布控\人员布控\智能分析(车辆违停、区域入侵、俳徊、遗留物品、快速奔跑、穿越围栏等)\老年人呼救......</td>
+                    <td align="center" class="STYLE5">2015年3月1日 15：40分30秒</td>
+                    <td align="center" class="STYLE5">桂花园</td>
+                    <td align="center" class="STYLE5">南门进口摄像机</td>
+                    <td align="center" class="STYLE5">已处理/未处理</td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+            <table  border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>紧急呼救</title>
+
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+</head>
+<style>
+    /*背景图片*/
+    .bg
+    {
+        background: url(images/nanduo.jpg) no-repeat;
+        width: 800px;
+    }
+
+        /*中间图片通用设置*/
+        .bg span
+        {
+            display: block;
+            width: 48px;
+            height: 68px;
+            background: url(images/zc.png) no-repeat;
+            position: absolute;
+        }
+
+        .bg b
+        {
+            display: block;
+            width: 61px;
+            height: 95px;
+            background: url(images/sos.png) no-repeat;
+            position: absolute;
+        }
+
+    /*各坐标点位置*/
+    .A1
+    {
+        left: 21px;
+        top: 10px;
+    }
+
+    .A2
+    {
+        left: 121px;
+        top: 50px;
+    }
+
+    .A3
+    {
+        left: 221px;
+        top: 90px;
+    }
+
+    .A4
+    {
+        left: 321px;
+        top: 130px;
+    }
+
+    .B1
+    {
+        left: 221px;
+        top: 110px;
+    }
+
+    .B2
+    {
+        left: 221px;
+        top: 150px;
+    }
+
+    .B3
+    {
+        left: 221px;
+        top: 190px;
+    }
+
+    .B4
+    {
+        left: 421px;
+        top: 330px;
+    }
+</style>
+
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" bgcolor="#CFF1F3">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" valign="top" class="p5">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" valign="top" bgcolor="#FFFFFF">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="1000" class="bg">
+                                                    <span class="A1"></span>
+                                                    <span class="A2"></span>
+                                                    <span class="A3"></span>
+                                                    <span class="A4"></span>
+                                                    <b class="B1"></b>
+                                                    <b class="B2"></b>
+                                                    <b class="B3"></b>
+                                                    <b class="B4"></b>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

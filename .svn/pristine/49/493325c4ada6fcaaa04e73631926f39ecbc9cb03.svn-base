@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TPortalClass;
+
+public partial class iportal_app_list_jjhj : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        HyAlarm hyAlarm = new HyAlarm();
+        DataTable dt = hyAlarm.GetDataTable(10, "");
+        StringBuilder sbBuilder = new StringBuilder();
+        if (dt.Rows.Count > 0)
+        {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                sbBuilder.Append("<tr><td height=\"37\" align=\"center\" background=\"images/jjhj_an1.jpg\">");
+                sbBuilder.Append("<table width=\"301\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+                sbBuilder.Append("<tr><td width=\"35\" align=\"left\">");
+                if (dt.Rows[i]["hy_type"].ToString() == "1")
+                {
+                    sbBuilder.Append("<img src=\"images/jjhj_dian2.png\" width=\"21\" height=\"21\" />");
+                }
+                else if (dt.Rows[i]["hy_type"].ToString() == "0")
+                {
+                    sbBuilder.Append("<img src=\"images/jjhj_dian1.png\" width=\"21\" height=\"21\" />");
+                }
+                sbBuilder.Append("</td><td width=\"266\" align=\"left\" class=\"STYLE5\"><a href=\"#\" onclick=\"hymainajax_gis('" + dt.Rows[i]["hy_alarmId"].ToString() + "','" + dt.Rows[i]["hy_type"].ToString() + "')\">" + dt.Rows[i]["hy_summary"].ToString() + "</a></td>");
+                sbBuilder.Append("</tr></table></td></tr>");
+                sbBuilder.Append("<tr><td height=\"4\" align=\"center\"></td></tr>");
+            }
+        }
+        this.lb_showAlarm.Text = sbBuilder.ToString();
+    }
+}

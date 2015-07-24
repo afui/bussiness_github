@@ -1,0 +1,73 @@
+#Nav{background:transparent}
+#Nav img.Pa{top:125px;left:158px}
+#Search .Pa{width:410px;top:44px}
+.Banner1{height:480px;background:#eee url(/images/s_01.jpg) no-repeat top center}
+.Banner1 #Nav{height:100%}
+.Banner1 .hot{width:615px;height:115px;padding:15px 0 15px 15px;filter:Alpha(opacity=80);background:#2f3133;background:rgba(47,49,51,0.8);position:relative;top:212px;left:160px;border-radius:2px;float:left}
+.Banner1 .hot form{height:46px;position:relative}
+.Banner1 .hot input{width:400px;height:36px;line-height:36px;border:0;border-radius:2px; padding-left:2px;}
+.Banner1 .hot button{font-size:18px;height:36px;line-height:36px;width:80px}
+.Banner1 .hot dl{color:#ccc;clear:both;padding-top:2px;word-spacing:5px;position:relative}
+.Banner1 .hot dl a{white-space:nowrap;color:#ccc}
+.Banner1 .hot dl a:hover{color:#e84a01;text-decoration:none}
+.Banner1 .hot dt{float:left;width:80px}
+.Banner1 .hot dd{float:left;width:520px; line-height:20px;}
+.Banner1 .hot .map{position:absolute;top:15px;right:15px;width:100px;height:36px;line-height:36px;text-indent:24px;font-size:18px;background:url(/images/bg2.png) no-repeat -342px -365px;color:#fff}
+.Banner1 .hot .map:hover{background-position:-342px -392px;color:#e84a01;text-decoration:none}
+.Banner1 .video{position:absolute;top:370px;left:396px;width:155px;height:40px;margin-bottom:2px;border:1px solid #e8e8e8;border-radius:2px;color:#fff}
+.Banner1 .video:hover{border:1px solid #828282}
+.Banner1 .video div{position:relative;width:155px;height:40px;opacity:.3;filter:alpha(opacity=30);background:#fff}
+.Banner1 .video:hover div{background:#333}
+.Banner1 .video a{position:absolute;height:100%;top:3px;left:23px;color:#fff;font-size:18px;display:block;line-height:32px}
+.Banner1 .video a:hover{text-decoration:none}
+.Banner1 .video a .iconfont{font-size:32px;vertical-align:sub}
+.PopVideo .closed{position:absolute;top:-14px;right:-40px;font-size:32px;line-hight:32px;color:#c3c7cd;cursor:pointer}
+.PopVideo .closed:hover{color:#fefefe}
+.Box1{padding:20px 0 30px;text-align:center;overflow:hidden}
+.Box1 h3{font-size:30px;line-height:60px;color:#e84a01;font-weight:normal}
+.Box1 p{font-size:20px;padding-top:10px}
+.Box1 p i{color:#e84a01}
+.Box1 .Rr{margin:0 4px;color:#31e0bd}
+.Server{background:#fff}
+.Box1.Server p{font-size:18px;color:#9b9ea1;padding-top:0}
+.Box1 .server{height:254px;list-style:none;color:#999}
+.Box1 .server li{float:left;display:inline;margin:35px 30px 10px 120px;width:200px;text-align:center;position:relative;height:200px;overflow:hidden}
+.Box1 .server li:first-child{margin-left:30px}
+.Box1 .server img{width:100%;height:200px;margin-bottom:20px}
+.Box1 .server li div{position:absolute;width:100%;height:200px;top:0;left:0;color:#fff;text-align:center;font-size:16px}
+.Box1 .server li div i{display:block}
+.Box1 .server li div b{font-weight:normal}
+.Box1 .server .tc2{background:#333;filter:Alpha(opacity=80);opacity:.8;z-index:200;top:142px;height:58px}
+.Box1 .server li:hover{cursor:pointer}
+.Box1 .server .msk{background:url(/images/bg2.png) no-repeat -163px -946px;z-index:300;height:202px}
+.Play{height:160px;margin:5px auto 0;padding:0 109px}
+.Play .Oh{height:200px}
+.Play .scroll{width:2342px;position:relative}
+.Play .house{width:223px;height:198px;float:left;border:1px solid #e9e9e9;background:#fff;text-align:left;margin-left:20px;margin-bottom:5px;position:relative;overflow:hidden}
+.Play .house:first-child{margin-left:0}
+.Play .house img{height:135px;width:223px;margin:0}
+.Play .house div{position:absolute;top:142px;left:0}
+.Play .house b,.Play .house i{display:block;text-indent:10px;color:#666a6d;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.Play .house b{font-size:16px;padding-bottom:5px}
+.Play .house i.price{font-weight:bold;position:absolute;right:0;top:105px;color:#fff;height:30px;line-height:30px;background:url(/images/bg2.png) no-repeat -267px -807px;width:96px;text-align:center}
+.Play .house .price span{font-size:18px;padding-right:5px}
+.Play .house:hover i.price{background-position:-267px -773px}
+.Play .house:hover{text-decoration:none}
+.Play .left,.Play .right{background:url(/images/bg.png) no-repeat 0 -1246px;filter:Alpha(opacity=40);opacity:.4;position:absolute;height:80px;top:48px;z-index:9;cursor:pointer;width:50px}
+.Play .right{background-position:-77px -1246px}
+.Play .left:hover,.Play .right:hover{filter:Alpha(opacity=100);opacity:1}
+.Play .left{left:0}
+.Play .right{right:0}
+.Soot{background:#fbfbfb;height:304px}
+.Soot .Tc{background:url(/images/service.jpg) no-repeat left;height:304px;width:1024px;margin:0 auto}
+.Soot h3,.Soot p{position:absolute}
+.Soot h3{font-size:36px;top:39px;right:60px;font-weight:normal}
+.Soot p,.Soot .Pa{font-size:18px}
+.Soot .Pa a,.Soot .Pa i{font-size:24px}
+.Soot p{color:#686e71;top:102px;right:0}
+.Soot .Pa{height:46px;line-height:46px;top:173px;right:10px;text-align:center}
+.Soot .Pa a,.Soot .Pa i{color:#fff;display:inline-block;width:192px;height:100%;text-align:center;margin:0 16px 0 0}
+.Soot .Pa a{background:url(/images/bg2.png) no-repeat -171px -844px}
+.Soot .Pa a:hover{text-decoration:none;background-position:-171px -894px}
+.Soot .Pa i{margin:0 0 0 10px;color:#252525;text-align:left;width:280px}
+.Soot .Pa i img{vertical-align:middle}

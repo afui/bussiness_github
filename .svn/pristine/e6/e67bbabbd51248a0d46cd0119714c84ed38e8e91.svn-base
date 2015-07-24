@@ -1,0 +1,26 @@
+function $(id){	
+//debugger;
+	return document.getElementById(id);
+}
+
+//objId为A链接的ID前缀，objContId为显示层的ID前缀，Num为当前tab编号,TotalNum所有tab数量
+function tabOver(objId,objContId,Num,TotalNum,classNameOn,classNameOff)
+    { 
+	    var tabNum = TotalNum;
+	    //debugger;
+	    for(var i=1;i<=tabNum;i++)
+	    {
+		    var tab = $(objId+i);
+		    var tabCont = $(objContId+i);
+		    if(i==Num)
+		    {
+			    tabCont.style.display='block';
+			    tab.className = classNameOn;
+		    }
+		    else
+		    {
+			    tabCont.style.display='none';
+			    tab.className = classNameOff;
+		    }
+	    }	
+}

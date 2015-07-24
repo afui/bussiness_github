@@ -1,0 +1,17 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="zbxlxt.aspx.cs" Inherits="iportal_app_zbxlxt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body bgcolor="#CFF1F3" >
+    <form id="form1" runat="server">
+   以社区名称为单位，以日、周、月、年为周期，每天按三班工作制进行排班。并划分内容及职责。
+巡更：
+结合小区楼道门禁系统，可对巡逻值班人员进行考核，统计。
+
+    </form>
+</body>
+</html>

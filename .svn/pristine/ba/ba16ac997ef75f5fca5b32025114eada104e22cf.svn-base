@@ -1,0 +1,533 @@
+.details 
+{
+    margin-top:10px;
+    z-index:1;
+	position: relative;
+	padding-top: 20px;
+}
+
+.details a,.details a:hover {
+	text-decoration: none;
+}
+
+.details .summary {
+	float: left;
+	width: 540px;
+	padding: 0 0 200px 0;
+}
+
+.details .icon {
+	background: url("/images/bg.png") no-repeat;
+	position: absolute;
+	margin: 23px 0 0 0;
+}
+
+.tit {
+	font-size: 18px;
+	line-height: 36px;
+	border-left: 4px solid #e84a01;
+	padding-left: 10px;
+	margin: 40px 0 0 0;
+}
+
+.tit .normal {
+	font-weight: normal;
+	color: #686e71;
+}
+
+.infos .dot {
+	font-size: .8em;
+	margin-right: 10px;
+}
+
+.infos .borT {
+	border-top: 1px solid #e0e0e0;
+	margin: 20px 0 20px 0;
+	padding: 10px 0 10px 0;
+	width: 100%;
+}
+
+.infos ul {
+	list-style: none;
+}
+
+.infos ul li {
+	position: relative;
+	vertical-align: top;
+}
+
+.infos ul li .ll {
+	width: 160px;
+}
+
+.infos .listGou,.infos .list {
+	display: block;
+	left: 160px;
+	margin-top: -21px;
+	padding-left: 160px;
+	list-style: none;
+}
+
+.infos .listGou i {
+	position: relative;
+	display: inline-block;
+	width: 160px;
+	margin: 0 0 4px 0;
+	padding-left: 20px;
+	background: url(/images/bg2.png) no-repeat;
+	background-position: -355px -524px;
+	height: 16px;
+	vertical-align: bottom;
+}
+
+.infos .list i {
+	display: inline-block;
+	width: 360px;
+	margin: 0 0 4px 0;
+	padding-left: 0;
+}
+
+.others table {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.others table th {
+	height: 40px;
+	color: #686e71;
+	background: #d8d5d1;
+}
+
+.others table td {
+	height: 40px;
+	color: #000;
+}
+
+.others .table .even td {
+	background: #ebe9e7;
+}
+
+.others .more {
+	float: right;
+	margin: 14px 0 0;
+}
+
+.others .more a,.others .table a:hover {
+	color: #e84a01;
+}
+
+.others .more a:hover,.others .table a:hover {
+	text-decoration: underline;
+}
+
+.slide {
+	position: relative;
+	height: 324px;
+	width: 540px;
+	border: 1px solid #e0e0e0;
+	background: #f2f2f2;
+	overflow: hidden;
+}
+
+.slide ul {
+	position: relative;
+	list-style: none;
+	height: 100%;
+	width: 999cm;
+}
+
+.slide li {
+	float: left;
+	position: relative;
+	width: 540px;
+	height: 100%;
+}
+
+.slide img {
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.slide .btncon {
+	position: absolute;
+	top: 105px;
+	z-index: 4;
+	width: 48px;
+	height: 112px;
+}
+
+.slide .btncon a {
+	position: relative;
+	display: block;
+	width: 48px;
+	height: 112px;
+}
+
+.slide .prevBtn {
+	left: 0;
+}
+
+.slide .nextBtn {
+	right: 0;
+}
+
+.slide .btncon a span {
+	position: absolute;
+	z-index: 90;
+	display: block;
+	width: 48px;
+	height: 112px;
+	background: url(/images/bg2.png) no-repeat;
+}
+
+.slide .nextBtn a span {
+	background-position: -49px -606px;
+}
+
+.slide .nextBtn a:hover span {
+	background-position: -147px -606px;
+}
+
+.slide .prevBtn a span {
+	background-position: 0 -606px;
+}
+
+.slide .prevBtn a:hover span {
+	background-position: -98px -606px;
+}
+
+.slide .imgInfo {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(/images/bg2.png?v=1.53) 0 -722px;
+	width: 100%;
+	height: 48px;
+}
+
+.slide .imgInfo i {
+	position: absolute;
+	left: 20px;
+	bottom: 5px;
+	color: #fff;
+}
+
+.maskMain,#map2d,#panorama {
+	height: 325px;
+	position: relative;
+	margin: 0 0 20px 0;
+}
+
+.iconZoom {
+	background: url(/images/bg2.png) -327px -445px;
+	width: 36px;
+	height: 36px;
+	vertical-align: top;
+	margin-bottom: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.iconZoom:hover {
+	background-position: -327px -482px;
+}
+
+.popWin {
+	width: 720px;
+	height: 430px;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.markDl {
+	background: url(/images/map.png) no-repeat;
+	background-position: -62px -272px;
+	width: auto;
+	height: 67px;
+	cursor: default;
+	text-align: left;
+	padding: 0 0 0 20px;
+	margin: -64px 0 0 -9px;
+}
+
+.markDl i {
+	position: absolute;
+	border: 1px solid #2733b3;
+	border-left: 0;
+	background: #4b5bcc;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 9px 0 6px;
+}
+
+.markD {
+	background: url(/images/map.png) no-repeat;
+	background-position: -62px -301px;
+	width: 16px;
+	height: 36px;
+	cursor: default;
+	text-align: left;
+	padding: 0 0 0 20px;
+	margin: -36px 0 0 -9px;
+	cursor: pointer;
+}
+
+.popMapWrap {
+	border-radius: 0;
+	overflow: visible;
+	box-shadow: none;
+}
+
+.popMap {
+	width: 720px;
+	height: 430px;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.mappoint label.BMapLabel {
+	display: block;
+	line-height: 20px!important;
+	padding: 0 9px!important;
+	border: 0 solid #351a7a!important;
+	background:;
+	font-weight: bold!important;
+	color: #fff!important;
+}
+
+.popMapMask label.BMapLabel {
+	display: block;
+	position: relative;
+	line-height: 20px!important;
+	padding: 0 16px!important;
+	border: 2px solid #351a7a!important;
+	background: #7647ec!important;
+	font-weight: bold!important;
+	color: #fff!important;
+}
+
+.popMapMask label.BMapLabel .icon {
+	display: block;
+	position: absolute;
+	left: -2px;
+	bottom: -8px;
+	width: 5px;
+	height: 8px;
+	background: url(/images/map/icon_arrow_drop.png) 0 0 no-repeat!important;
+}
+
+.popMapWrap .Close {
+	top: -16px;
+	right: -16px;
+	width: 32px;
+	height: 32px;
+	background: url(/images/bg2.png) -209px -467px;
+}
+
+.popMapWrap .Close:hover {
+	background-position: -243px -467px;
+}
+
+.maskMap {
+	opacity: .65;
+	filter: alpha(opacity=65);
+}
+
+.details .Fr {
+	width: 360px;
+}
+
+.details .Fr .Fixed {
+	width: 360px;
+	position: relative;
+}
+
+#slideWrap {
+	border: 1px solid #e0e0e0;
+	padding: 15px 17px 15px 19px;
+}
+
+#slideWrap h3 {
+	font-size: 24px;
+	color: #000;
+	font-weight: normal;
+	margin: 0;
+	position: relative;
+	height: 65px;
+}
+
+#slideWrap h3>b {
+	float: left;
+	width: 264px;
+	line-height: 30px;
+	overflow-x: hidden;
+	font-weight: normal;
+	height: 70px;
+}
+
+#slideWrap h3>b i {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+#slideWrap h4 {
+	font-size: 14px;
+	color: #979593;
+	margin-top: -10px;
+}
+
+#slideWrap h4 i {
+	padding-right: 20px;
+}
+
+#slideWrap .addFavorite {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 8px 20px 0 0;
+	width: 20px;
+	height: 20px;
+}
+
+#slideWrap .iconStar,#slideWrap .addFavorite:hover {
+	background-position: 0 -1012px;
+	width: 20px;
+	height: 20px;
+}
+
+#slideWrap .iconStarFav,#slideWrap .iconStar:hover {
+	background-position: 0 -1033px;
+	width: 20px;
+	height: 20px;
+}
+
+#slideWrap .iconBag {
+	background: url(/images/bg.png) no-repeat -110px -1119px;
+	text-indent: 20px;
+}
+
+#slideWrap p {
+	font-size: 18px;
+	line-height: 30px;
+	display: block;
+}
+
+#slideWrap .housePrice {
+	font-size: 30px;
+	color: #e84a01;
+	line-height: 40px;
+	margin: 10px 0;
+}
+
+#slideWrap .housePrice i {
+	font-size: 20px;
+}
+
+#slideWrap .houseType {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#slideWrap .houseRentDate {
+	font-size: 16px;
+	color: #686e71;
+	margin-bottom: 10px;
+}
+
+#slideWrap .btnFav {
+	background: #D3D5D9;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	height: 36px;
+	width: 100%;
+	cursor: default;
+}
+#slideWrap .btnFav2 {
+	background: #D3D5D9;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	height: 36px;
+	width: 100%;
+	cursor: default;
+	border:0;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+#slideWrap .btnView {
+	background: #E84A01;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	height: 36px;
+	width: 100%;
+	cursor: pointer;
+	border:0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+
+#slideWrap .btnView:hover {
+	background: #F16D2F;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	height: 36px;
+	width: 100%;
+	cursor:pointer;
+	border:0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+.btnAppdown {
+	position: relative;
+	display: block;
+	margin: 20px 0 0;
+	padding-left: 80px;
+	line-height: 70px;
+	height: 70px;
+	background: #f3f3f3;
+	border: 1px solid #e0e0e0;
+	text-align: left;
+	font-size: 18px;
+	color: #000;
+}
+
+.btnAppdown:hover {
+	color: #e84a01;
+}
+
+.btnAppdown i {
+	position: absolute;
+	background: url("/images/bg2.png") no-repeat 0 -532px;
+	width: 64px;
+	height: 64px;
+	top: 4px;
+	right: 17px;
+}
+.details
+{
+    padding-top:10px;
+}
+.details .table th,.details .table td {
+	padding-left: 10px;
+}
+
+.colTip {
+	left: 262px;
+}
+
+.qxsc {
+	width: 90px;
+	left: 247px;
+}

@@ -1,0 +1,80 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using TPortalClass;
+
+public partial class index : System.Web.UI.Page
+{
+    protected string ls_rnd = System.Guid.NewGuid().ToString();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (this.Session["uid"] == null || this.Session["uid"].ToString() == "")
+        {
+            this.Response.Redirect("login.aspx?url=" + this.Request.RawUrl.ToString());
+        }
+        else
+        {
+          //  HyUser HyUser = new HyUser();
+            //DataTable dt = HyUser.Getdocbyid(this.Session["uid"].ToString());
+            
+                lbluserinfo.Text = Session["uname"].ToString();
+            
+        }
+    }
+    //显示文章发布栏目
+    public string ls_nrgl()
+    {
+        string ls_return = "";
+        if (Session["uid"].ToString() == "")
+        {
+        }
+        else
+        {
+            DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            //文章发布左侧动态产生
+            HyCategory HyCategory = new HyCategory();
+            dt = HyCategory.Getdocs();
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (HyCategory.isHaveSubCategory(dt.Rows[i]["CID"].ToString(), "0") == true)
+                    {
+                        //有下一级栏目
+                        ls_return += "<li isexpand=\"false\">";
+                        ls_return += "<span>" + dt.Rows[i]["hy_cname"].ToString() + "</span>";
+                        ls_return += "<ul>";
+                        //ls_return += GetNextColumn(dt.Rows[i]["cid"].ToString());
+                        dt2 = HyCategory.GetSecondlevCategory("0001", "0", 12);
+                        if (dt2.Rows.Count > 0)
+                        {
+                            for (int k = 0; k < dt2.Rows.Count; k++)
+                            {
+                                ls_return += "<li url=\"ContentManage/list_content.aspx?cid=" + dt2.Rows[k]["CID"].ToString() + "\"><span>";
+                                ls_return += dt2.Rows[k]["hy_cname"].ToString() + "</span></li>";
+                            }
+
+                        }
+                        ls_return += "</ul>";
+                        ls_return += "</li>";
+                    }
+                    else
+                    {
+                        //无下一级栏目
+                        ls_return += "<li url=\"ContentManage/list_content.aspx?cid=" + dt.Rows[i]["CID"].ToString() + "\"><span>";
+                        ls_return += dt.Rows[i]["hy_cname"].ToString() + "</span></li>";
+                    }
+                }
+            }
+        }
+        return ls_return;
+    }
+}

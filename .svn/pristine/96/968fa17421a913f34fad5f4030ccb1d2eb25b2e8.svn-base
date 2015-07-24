@@ -1,0 +1,458 @@
+
+.normal {
+	FONT-WEIGHT: normal
+}
+
+A.default SPAN {
+	PADDING-LEFT: 0px
+}
+A.fresh SPAN {
+	PADDING-LEFT: 0px
+}
+A.normal SPAN {
+	PADDING-LEFT: 0px
+}
+.default SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+A.default {
+	BACKGROUND-POSITION: 0px 0px
+}
+A.fresh SPAN {
+	BACKGROUND-POSITION: 0px -120px
+}
+A.fresh {
+	BACKGROUND-POSITION: 0px -120px
+}
+A.normal {
+	BACKGROUND-POSITION: 0px -120px
+}
+.normal SPAN {
+	BACKGROUND-POSITION: 0px -300px
+}
+A.normal {
+	BACKGROUND-POSITION: 0px -300px
+}
+A.default SPAN {
+	BACKGROUND-POSITION: right -30px
+}
+A.fresh SPAN {
+	BACKGROUND-POSITION: right -150px
+}
+A.normal SPAN {
+	BACKGROUND-POSITION: right -330px; COLOR: #333
+}
+A.normal SPAN {
+	BACKGROUND-POSITION: right -330px; COLOR: #333
+}
+A.big-fresh {
+	BACKGROUND-POSITION: 0px -180px
+}
+A.big-normal {
+	BACKGROUND-POSITION: 0px -360px
+}
+A.big-default {
+	BACKGROUND-POSITION: 0px -60px
+}
+A.big-fresh SPAN {
+	BACKGROUND-POSITION: right -210px
+}
+A.big-default SPAN {
+	BACKGROUND-POSITION: right -90px
+}
+A.default {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A.normal {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A.fresh {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A.small-fresh {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A.default:hover {
+	TEXT-DECORATION: none
+}
+A.normal:hover {
+	TEXT-DECORATION: none
+}
+A.fresh:hover {
+	TEXT-DECORATION: none
+}
+A.small-fresh:hover {
+	TEXT-DECORATION: none
+}
+A.default SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 26px; PADDING-RIGHT: 20px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #333; FONT-SIZE: 12px; CURSOR: pointer; TEXT-DECORATION: none; _height: 27px
+}
+A.fresh SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 26px; PADDING-RIGHT: 20px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #333; FONT-SIZE: 12px; CURSOR: pointer; TEXT-DECORATION: none; _height: 27px
+}
+A.normal SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 26px; PADDING-RIGHT: 20px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #333; FONT-SIZE: 12px; CURSOR: pointer; TEXT-DECORATION: none; _height: 27px
+}
+A.small-fresh SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 26px; PADDING-RIGHT: 20px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #333; FONT-SIZE: 12px; CURSOR: pointer; TEXT-DECORATION: none; _height: 27px
+}
+A.normal SPAN {
+	COLOR: #333
+}
+A.big-fresh {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); PADDING-LEFT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.big-default {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); PADDING-LEFT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.big-normal {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); PADDING-LEFT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.big-normal:hover {
+	COLOR: #333
+}
+A.normal:hover {
+	COLOR: #333
+}
+A.big-fresh:hover {
+	COLOR: #333
+}
+A.big-default:hover {
+	COLOR: #333
+}
+A.fresh:hover {
+	COLOR: #333
+}
+A.default:hover {
+	COLOR: #333
+}
+A.big-fresh:hover {
+	TEXT-DECORATION: none
+}
+A.big-default:hover {
+	TEXT-DECORATION: none
+}
+A.big-normal:hover {
+	TEXT-DECORATION: none
+}
+A.big-fresh SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 30px; PADDING-RIGHT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; CURSOR: pointer
+}
+A.big-default SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 30px; PADDING-RIGHT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; CURSOR: pointer
+}
+A.big-normal SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 30px; PADDING-RIGHT: 30px; DISPLAY: inline-block; HEIGHT: 30px; COLOR: #333; CURSOR: pointer
+}
+A.big-normal SPAN {
+	BACKGROUND-POSITION: right -390px; COLOR: #333
+}
+A.default {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px; _height: 27px
+}
+A.normal {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px; _height: 27px
+}
+A.fresh {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px; _height: 27px
+}
+A.small-fresh {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px; _height: 27px
+}
+A.small-default {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px; _height: 27px
+}
+A.default SPAN {
+	DISPLAY: inline-block
+}
+A.fresh SPAN {
+	DISPLAY: inline-block
+}
+A.normal SPAN {
+	DISPLAY: inline-block
+}
+A.small-default SPAN {
+	DISPLAY: inline-block
+}
+A.default SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png)
+}
+A.fresh SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png)
+}
+A.normal SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png)
+}
+A.small-default SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png)
+}
+.default SPAN {
+	DISPLAY: inline-block; HEIGHT: 26px
+}
+.fresh SPAN {
+	DISPLAY: inline-block; HEIGHT: 26px
+}
+.normal SPAN {
+	DISPLAY: inline-block; HEIGHT: 26px
+}
+.small-default SPAN {
+	DISPLAY: inline-block; HEIGHT: 26px
+}
+A.small-default {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 24px; PADDING-LEFT: 25px; BACKGROUND-POSITION: 0px -480px; HEIGHT: 24px
+}
+A.small-default:hover {
+	TEXT-DECORATION: none
+}
+A.small-default SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); LINE-HEIGHT: 24px; PADDING-RIGHT: 25px; BACKGROUND-POSITION: right -510px; HEIGHT: 24px; COLOR: #333; _padding-top: 1px
+}
+A.small-fresh {
+	LINE-HEIGHT: 24px; PADDING-LEFT: 24px; HEIGHT: 24px
+}
+A.small-fresh {
+	BACKGROUND-POSITION: 0px -420px
+}
+A.small-fresh SPAN {
+	LINE-HEIGHT: 24px; PADDING-RIGHT: 24px; BACKGROUND-POSITION: right -450px; HEIGHT: 24px
+}
+BUTTON.default SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.fresh SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.normal SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.big-default SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.big-fresh SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.big-normal SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.small-default SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.small-fresh SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON.small-normal SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; BORDER-RIGHT-STYLE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none; OVERFLOW: visible; CURSOR: pointer; PADDING-TOP: 0px
+}
+BUTTON SPAN {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-LEFT: 20px; DISPLAY: inline-block; BORDER-TOP-STYLE: none; HEIGHT: 26px; VERTICAL-ALIGN: middle; BORDER-LEFT-STYLE: none
+}
+BUTTON SPAN SPAN {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 0px; PADDING-RIGHT: 20px; DISPLAY: block; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 0px; HEIGHT: 26px; COLOR: #333; MARGIN-RIGHT: 0px; _height: 27px
+}
+BUTTON SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BACKGROUND-REPEAT: no-repeat
+}
+A.button {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BACKGROUND-REPEAT: no-repeat
+}
+A.button SPAN {
+	BACKGROUND-IMAGE: url(/images/btn_a.png); BACKGROUND-REPEAT: no-repeat
+}
+BUTTON.default SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+A.default.button {
+	BACKGROUND-POSITION: 0px 0px
+}
+.dialog BUTTON.default SPAN {
+	BACKGROUND-POSITION: 0px -120px
+}
+BUTTON.fresh SPAN {
+	BACKGROUND-POSITION: 0px -120px
+}
+A.fresh.button {
+	BACKGROUND-POSITION: 0px -120px
+}
+BUTTON.normal SPAN {
+	BACKGROUND-POSITION: 0px -300px
+}
+A.normal.button {
+	BACKGROUND-POSITION: 0px -300px
+}
+BUTTON.default SPAN SPAN {
+	BACKGROUND-POSITION: right -30px
+}
+A.default.button SPAN {
+	BACKGROUND-POSITION: right -30px
+}
+.dialog BUTTON.default SPAN SPAN {
+	BACKGROUND-POSITION: right -150px
+}
+BUTTON.fresh SPAN SPAN {
+	BACKGROUND-POSITION: right -150px
+}
+A.fresh.button SPAN {
+	BACKGROUND-POSITION: right -150px
+}
+BUTTON.normal SPAN SPAN {
+	BACKGROUND-POSITION: right -330px; COLOR: #333
+}
+A.normal.button SPAN {
+	BACKGROUND-POSITION: right -330px; COLOR: #333
+}
+BUTTON.big-normal SPAN {
+	COLOR: #333
+}
+A.big-normal.button SPAN {
+	COLOR: #333
+}
+
+A.button {
+	LINE-HEIGHT: 26px; PADDING-LEFT: 20px; DISPLAY: inline-block; VERTICAL-ALIGN: middle; TEXT-DECORATION: none
+}
+A.button SPAN {
+	LINE-HEIGHT: 26px; PADDING-RIGHT: 20px; DISPLAY: inline-block; HEIGHT: 26px; COLOR: #333; FONT-SIZE: 12px; CURSOR: pointer; TEXT-DECORATION: none
+}
+A.normal.button SPAN {
+	COLOR: #333
+}
+
+A.button:hover {
+	TEXT-DECORATION: none
+}
+A.normal SPAN {
+	COLOR: #333
+}
+
+A.default.button SPAN.icon-box {
+	BACKGROUND-IMAGE: url(/images/icons/btn-i.gif); POSITION: absolute; MARGIN-TOP: 4px; WIDTH: 16px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; MARGIN-LEFT: -18px; MARGIN-RIGHT: 5px
+}
+A.fresh.button SPAN.icon-box {
+	BACKGROUND-IMAGE: url(/images/icons/btn-i.gif); POSITION: absolute; MARGIN-TOP: 4px; WIDTH: 16px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; MARGIN-LEFT: -18px; MARGIN-RIGHT: 5px
+}
+A.normal.button SPAN.icon-box {
+	BACKGROUND-IMAGE: url(/images/icons/btn-i.gif); POSITION: absolute; MARGIN-TOP: 4px; WIDTH: 16px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 16px; MARGIN-LEFT: -18px; MARGIN-RIGHT: 5px
+}
+
+A.default.button SPAN.icon-box {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 4px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A.fresh.button SPAN.icon-box {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 4px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A.normal.button SPAN.icon-box {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 4px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+
+
+
+.new-button {
+	BACKGROUND-IMAGE: url(/images/chrome/button-big.png); BORDER-BOTTOM-STYLE: none; TEXT-ALIGN: center; LINE-HEIGHT: 32px; BORDER-RIGHT-STYLE: none; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; BORDER-TOP-STYLE: none; HEIGHT: 32px; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none
+}
+.new-button4 {
+	WIDTH: 99px; BACKGROUND-POSITION: 0px -74px; COLOR: #333; FONT-WEIGHT: bold
+}
+.new-button4:hover {
+	BACKGROUND-POSITION: -99px -74px; COLOR: #333; TEXT-DECORATION: none
+}
+.new-button-normal4 {
+	WIDTH: 99px; BACKGROUND-POSITION: 0px -106px; COLOR: #333
+}
+.new-button-normal4:hover {
+	BACKGROUND-POSITION: -99px -106px; COLOR: #333; TEXT-DECORATION: none
+}
+BUTTON:unknown {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+BUTTON.big-normal SPAN {
+	FLOAT: left
+}
+BUTTON.big-default SPAN {
+	FLOAT: left
+}
+BUTTON.big-fresh SPAN {
+	FLOAT: left
+}
+BUTTON.normal:hover SPAN {
+	BACKGROUND-POSITION: 0px -660px
+}
+A.normal:hover {
+	BACKGROUND-POSITION: 0px -660px
+}
+BUTTON.normal:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -660px
+}
+A.normal:hover SPAN {
+	BACKGROUND-POSITION: right -660px
+}
+BUTTON.big-normal:hover SPAN {
+	BACKGROUND-POSITION: 0px -690px
+}
+A.big-normal:hover {
+	BACKGROUND-POSITION: 0px -690px
+}
+BUTTON.big-normal:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -690px
+}
+A.big-normal:hover SPAN {
+	BACKGROUND-POSITION: right -690px
+}
+BUTTON.default:hover SPAN {
+	BACKGROUND-POSITION: 0px -570px
+}
+BUTTON.fresh:hover SPAN {
+	BACKGROUND-POSITION: 0px -570px
+}
+A.default:hover {
+	BACKGROUND-POSITION: 0px -570px
+}
+A.fresh:hover {
+	BACKGROUND-POSITION: 0px -570px
+}
+BUTTON.default:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -570px
+}
+BUTTON.fresh:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -570px
+}
+A.default:hover SPAN {
+	BACKGROUND-POSITION: right -570px
+}
+A.fresh:hover SPAN {
+	BACKGROUND-POSITION: right -570px
+}
+BUTTON.big-default:hover SPAN {
+	BACKGROUND-POSITION: 0px -600px
+}
+BUTTON.big-fresh:hover SPAN {
+	BACKGROUND-POSITION: 0px -600px
+}
+A.big-default:hover {
+	BACKGROUND-POSITION: 0px -600px
+}
+A.big-fresh:hover {
+	BACKGROUND-POSITION: 0px -600px
+}
+BUTTON.big-default:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -600px
+}
+BUTTON.big-fresh:hover SPAN SPAN {
+	BACKGROUND-POSITION: right -600px
+}
+A.big-default:hover SPAN {
+	BACKGROUND-POSITION: right -600px
+}
+A.big-fresh:hover SPAN {
+	BACKGROUND-POSITION: right -600px
+}
+A.small-fresh:hover {
+	BACKGROUND-POSITION: 0px -540px
+}
+A.small-fresh:hover SPAN {
+	BACKGROUND-POSITION: right -540px
+}
+
+

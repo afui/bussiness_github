@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+    <title>人员列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta name="generator" content="editplus" />
+    <link href="hyhtml/ltree/resources/css/lTREE.checkbox.css" rel="stylesheet" />
+    <link href="hyhtml/ltree/resources/css/lTREE.default.css" rel="stylesheet" />
+    <link href="hyhtml/ltree/resources/css/css.css" rel="stylesheet" />
+    <link href="hyhtml/ltree/resources/css/lTREE.simple.css" rel="stylesheet" />
+    <style type="text/css">
+        #lTREEMenuDEMO
+        {
+            border: 1px solid #ccc;
+            margin: 3px;
+            padding: 3px;
+        }
+
+        #infoBox
+        {
+            position: absolute;
+            left: 450px;
+            top: 40px;
+            border: 1px solid #ccc;
+            width: 400px;
+            padding: 0 10px;
+            font-family: "宋体",Geneva,Arial,sans-serif;
+            line-height: 150%;
+        }
+
+        #debugMSG strong
+        {
+            color: #f00;
+        }
+    </style>
+    <!--[if IE 6]><script>document.execCommand("BackgroundImageCache", false, true);</script><![endif]-->
+</head>
+<body style="padding: 2px;">
+    <div class="lTREEMenu lTREENormal" id="lTREEMenuDEMO">
+        <dl>
+            <dl>
+                <dd>
+                    <input type="checkbox" name="SelAll" value="全选" onclick="SelectAll();" style="width: 13;">
+                    <b>人员列表</b><dl>
+                        <dd class="folderClose">
+                            <input type="checkbox" name="Dept001" value="001">智慧宁波社区<dl>
+                                <dd class="folderClose">
+                                    <input type="checkbox" name="Dept001001" value="001001">智慧镇海社区<dl>
+                                        <dd class="folderClose">
+                                            <input type="checkbox" name="Dept001001001" value="001001001">智慧风景九园社区<dl></dl>
+                                        </dd>
+                                        <dt>
+                                            <input type="checkbox" name="Usertest_subuser" value="test|测试员" text="测试员">测试员</dt>
+                                    </dl>
+                                </dd>
+                            </dl>
+                        </dd>
+                        <dd class="folderClose">
+                            <input type="checkbox" name="Dept002" value="002">管理员组<dl>
+                                <dt>
+                                    <input type="checkbox" name="Useradmin_subuser" value="admin|管理员" text="管理员">管理员</dt>
+                            </dl>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+    </div>
+    <script type="text/javascript" src="hyhtml/ltree/js/lTREE.js"></script>
+    <script class="lJSFDemo" type="text/javascript">
+        var lTree = new lTREE();
+        lTree.config({ path: "dl dd" });
+        lTree.tagName({ folder: "DD", file: "DT" });
+        lTree.className({ folderClose: "folderClose", lastChild: "lastChild" });
+        var t = new Date(), timer = []; lTree.build("lTREEMenuDEMO");
+        timer.push(new Date() - t);
+        function chkAll() {
+            var a = this.parentNode.getElementsByTagName("input"), b = this.checked;
+            for (var i = 0, l = a.length; i < l; i++) {
+                 a[i].checked = b;
+            }
+        }
+        function chkOne() {
+            var a = this, b = this.checked, p = lDOM.$("lTREEMenuDEMO"), pn = null;
+            while (a.tagName != "DD" && a != p) a = a.parentNode;
+            pn = a.getElementsByTagName("input");
+            if (b) {
+                for (var i = 1, l = pn.length; i < l; i++) {
+                    if (!pn[i].checked) {
+                         b = false; break;
+                    }
+                }
+            }
+            pn[0].checked = b;
+        }
+        var arrCHK = lDOM.find("dl dd input", lDOM.$("lTREEMenuDEMO"), { type: "checkbox" });
+        arrCHK.each(function(s) {
+            if (s.parentNode.tagName == "DT") {
+                s.onclick = chkOne;
+            } else {
+                 s.onclick = chkAll;
+            }
+        }); </script>
+</body>
+</html>

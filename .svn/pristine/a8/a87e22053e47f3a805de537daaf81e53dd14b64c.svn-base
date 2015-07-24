@@ -1,0 +1,220 @@
+/* CSS Document */
+body
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+
+.btnSubmit
+{
+    padding: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    color: #3D80B3;
+    font-weight: bold;
+    border: 1px solid #AED0EA;
+    background: url(../../iportal/images/index/images/btn_bg.gif) 0 -44px repeat-x;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.btn
+{
+    background: #16a0d3;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 1px 0 0;
+    padding: 0 20px;
+}
+
+    .btn:hover
+    {
+        background: #117ea6;
+    }
+
+    .btn.green
+    {
+        background: #52A152;
+    }
+
+        .btn.green:hover
+        {
+            background: #328032;
+        }
+
+    .btn.yellow
+    {
+        background: #FF9C30;
+    }
+
+        .btn.yellow:hover
+        {
+            background: #c87316;
+        }
+
+    .btn.violet
+    {
+        background: #993333;
+    }
+
+        .btn.violet:hover
+        {
+            background: #990033;
+        }
+
+a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+    a:hover
+    {
+        color: #0187CE;
+        text-decoration: none;
+    }
+
+    a:ative
+    {
+        color: #000000;
+        text-decoration: none;
+    }
+
+.STYLE1
+{
+    color: #FF0000;
+    font-size: 16px;
+}
+
+.STYLE2
+{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.STYLE3
+{
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.STYLE4
+{
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.STYLE5
+{
+    color: #000000;
+    font-size: 14px;
+}
+
+.STYLE6
+{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+
+.STYLE7
+{
+    font-size: 14px;
+    color: #0187CE;
+    font-weight: bold;
+}
+
+.STYLE8
+{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.bk1
+{
+    border-top: 1px solid #1766B5;
+    border-left: 1px solid #1766B5;
+    border-right: 1px solid #1766B5;
+}
+
+.bk2
+{
+    border-top: 1px solid #95BFE9;
+    border-left: 1px solid #95BFE9;
+    border-right: 1px solid #95BFE9;
+    width: 100%;
+}
+
+.bk3
+{
+    border-bottom: 1px solid #95BFE9;
+    border-left: 1px solid #95BFE9;
+    border-right: 1px solid #95BFE9;
+}
+
+.p5
+{
+    padding: 0 10px;
+}
+
+.STYLE55
+{
+    BACKGROUND: url(clgkxt_lmbg1.jpg) center no-repeat;
+    font-size: 14px;
+    color: #0187CE;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.STYLE66
+{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.zi1
+{
+    font-weight: bold;
+    color: #0187CE;
+    font: 18px/2 Microsoft YaHei,\5FAE\8F6F\96C5\9ED1;
+}
+
+.zi2
+{
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Î¢ÈíÑÅºÚ";
+    padding-left: 30px;
+    text-align: left;
+}
+
+.tab
+{
+    border-collapse: collapse;
+    border: solid #F2F2F2;
+    border-width: 2px 0 0 2px;
+    margin: 10px 0;
+}
+
+    .tab td
+    {
+        border: solid #F2F2F2;
+        border-width: 0 2px 2px 0;
+        line-height: 28px;
+    }

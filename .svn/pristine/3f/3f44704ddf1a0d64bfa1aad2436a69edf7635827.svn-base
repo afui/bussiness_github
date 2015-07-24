@@ -1,0 +1,393 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="znyj_jjhj.aspx.cs" Inherits="iportal_app_znyj_clbk" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>紧急呼救</title>
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" bgcolor="#CFF1F3">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" valign="top" class="p5">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="10">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" valign="middle" bgcolor="#FFFFFF">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <img src="images/jjhj_zp1.jpg" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="5" bgcolor="#FFFFFF">
+                        </td>
+                        <td width="30%" valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="42" align="left">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td height="25" valign="bottom">
+                                                                <div align="left">
+                                                                    <img src="images/clbk_bjxxxx.jpg" width="119" height="19" /></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" bgcolor="#FFFFFF">
+                                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="12">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="left" class="STYLE5">
+                                                                <table width="300" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="70" align="left">
+                                                                            报警类型：
+                                                                        </td>
+                                                                        <td width="65" align="left">
+                                                                            紧急呼救
+                                                                        </td>
+                                                                        <td align="left">
+                                                                            <img src="images/jjhj_sos.jpg" width="26" height="26" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="70" height="25" align="left" class="STYLE5">
+                                                                呼救地点：
+                                                            </td>
+                                                            <td align="left" class="STYLE5">
+                                                                桂花园7幢708室
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                小区名称：
+                                                            </td>
+                                                            <td align="left" class="STYLE5">
+                                                                桂花园
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="left" class="STYLE5">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="70" align="left">
+                                                                            呼救姓名：
+                                                                        </td>
+                                                                        <td width="73" align="left">
+                                                                            张三
+                                                                        </td>
+                                                                        <td width="70" align="left">
+                                                                            联系电话：
+                                                                        </td>
+                                                                        <td width="90" align="left">
+                                                                            13911111111
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                照片：
+                                                            </td>
+                                                            <td align="left" class="STYLE5">
+                                                                <img src="images/rybk_zpzp.jpg" width="130" height="80" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                呼救时间：
+                                                            </td>
+                                                            <td align="left" class="STYLE5">
+                                                                2015年3月1日 15：40分30秒
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="left" class="STYLE5">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="100" align="left" class="STYLE5">
+                                                                            呼救累计次数：
+                                                                        </td>
+                                                                        <td align="left" class="STYLE5">
+                                                                            10次
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="10">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="42" align="left">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td height="25" valign="bottom">
+                                                                <div align="left">
+                                                                    <img src="images/rybk_yjyy.jpg" width="78" height="18" /></div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" bgcolor="#FFFFFF">
+                                                    <table width="15%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="12">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="center" class="STYLE5">
+                                                                <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="70" align="left">
+                                                                            呼救人员：
+                                                                        </td>
+                                                                        <td width="40" align="left">
+                                                                            张三
+                                                                        </td>
+                                                                        <td width="44" align="left">
+                                                                            年龄：
+                                                                        </td>
+                                                                        <td width="40" align="left">
+                                                                            60岁
+                                                                        </td>
+                                                                        <td width="70" align="left">
+                                                                            家庭状况：
+                                                                        </td>
+                                                                        <td width="39" align="left">
+                                                                            独居
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="70" height="25" align="left" class="STYLE5">
+                                                                家庭住址：
+                                                            </td>
+                                                            <td width="245" height="25" align="left" class="STYLE5">
+                                                                桂花园7幢708室
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                过往病史：
+                                                            </td>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                老年痴呆症、高血压等
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                常备药：
+                                                            </td>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                ************
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="left" class="STYLE5">
+                                                                <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="70" align="left">
+                                                                            家属姓名：
+                                                                        </td>
+                                                                        <td width="76" align="left">
+                                                                            李四
+                                                                        </td>
+                                                                        <td width="45" align="left">
+                                                                            关系：
+                                                                        </td>
+                                                                        <td width="124" align="left">
+                                                                            父子
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                家属电话：
+                                                            </td>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                13912345678
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" colspan="2" align="center" class="STYLE5">
+                                                                <table width="95%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="99" align="left">
+                                                                            值班人员班长：
+                                                                        </td>
+                                                                        <td width="61" align="left">
+                                                                            ***
+                                                                        </td>
+                                                                        <td width="70" align="left">
+                                                                            联系电话：
+                                                                        </td>
+                                                                        <td width="85" align="left">
+                                                                            13911111111
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                处理结果：
+                                                            </td>
+                                                            <td height="25" align="left" class="STYLE5">
+                                                                已处理
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="15%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="18">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="98%">
+                            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="42">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="20" height="25" valign="bottom">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="80%" valign="bottom">
+                                                    <img src="images/clbk_bjxxlb.jpg" width="119" height="19" />
+                                                </td>
+                                                <td valign="bottom">
+                                                    <span class="STYLE5">当前发现预警信息</span> <span class="STYLE1">30</span> <span class="STYLE5">
+                                                        条</span>
+                                                </td>
+                                                <td width="50" valign="bottom" class="STYLE5">
+                                                    更多&gt;&gt;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFFF">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="2">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+                                            <tr>
+                                                <td height="33" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    预警类型
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警时间
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警地点
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    报警点位
+                                                </td>
+                                                <td width="15%" align="center" bgcolor="7ECF72" class="STYLE4">
+                                                    处理结果
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" class="STYLE5">
+                                                    智能分析(车辆违停、区域入侵、俳徊、遗留物品、快速奔跑、穿越围栏等)
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    2015年3月1日 15：40分30秒
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    桂花园
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    南门进口摄像机
+                                                </td>
+                                                <td align="center" class="STYLE5">
+                                                    已处理/未处理
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td height="10">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

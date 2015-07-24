@@ -1,0 +1,32 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="zh_index.aspx.cs" Inherits="iportal_app_zh_index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>系统查询首页</title>
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="images/zhsq.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <img src="images/ejym_bg.jpg" alt="" width="1190" height="660" usemap="#Map" border="0" />
+                <map name="Map" id="Map2">
+                    <area shape="rect" coords="748,409,901,560" href="sjjm_tj.aspx" />
+                    <area shape="rect" coords="747,257,900,408" href="list_jjhj.aspx" />
+                    <area shape="rect" coords="748,103,901,254" href="sjjm_rybk.aspx" />
+                    <area shape="rect" coords="246,410,399,561" href="sjjm_zhtj.aspx" />
+                    <area shape="rect" coords="245,110,396,248" href="sjjm_clbk.aspx" />
+                    <area shape="rect" coords="244,255,397,406" href="sjjm_znfx.aspx" />
+                </map>
+            </td>
+        </tr>
+    </table>
+    <map name="Map" id="Map">
+        <area shape="rect" coords="245,110,396,248" href="#" />
+    </map>
+    </form>
+</body>
+</html>

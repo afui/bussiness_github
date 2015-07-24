@@ -1,0 +1,138 @@
+﻿<%@ WebHandler Language="C#" Class="Handler" %>
+
+using System;
+using System.Web;
+
+public class Handler : IHttpHandler {
+    
+    public void ProcessRequest (HttpContext context) {
+        //context.Response.ContentType = "text/plain";
+        //context.Response.Write("Hello World");
+        //取得处事类型
+        string action = "";
+        if (HttpContext.Current.Request.QueryString["action"] != null)
+        {
+            action = HttpContext.Current.Request.QueryString["action"].ToString();
+        }
+
+        switch (action)
+        {
+            case "0":       //会员名检测
+                CheckLoginName(context);
+                break;
+            case "1":       //邮箱检测
+                CheckEmail(context);
+                break;
+        }
+    }
+
+
+    #region 用户名检测==============================
+    /// <summary>
+    /// 用户名检测
+    /// </summary>
+    /// <param name="context"></param>
+    private static void CheckLoginName(HttpContext context)
+    {
+        string userName = "";
+        if (context.Request.QueryString["name"] != null)
+            userName = context.Request.QueryString["name"].ToString();
+        if (userName == "")
+        {
+            context.Response.Write("2");
+            return;
+        }
+        //根据传入的ID判断该ID是否已经存在
+        TPortalClass.HyUser HyUser = new TPortalClass.HyUser();
+        HyUser.hy_id = userName;
+        if (HyUser.IsExistUid())
+        {
+            context.Response.Write("1");
+        }
+        else
+        {
+            context.Response.Write("0");
+        }
+    }
+    #endregion
+
+    #region 邮箱检测==============================
+    /// <summary>
+    /// 判断邮箱
+    /// </summary>
+    /// <param name="contemail"></param>
+    private static void CheckEmail(HttpContext context)
+    {
+        string Email_user = "";
+        if (context.Request.QueryString["name"] != null)
+            Email_user = context.Request.QueryString["name"].ToString();
+
+        string Kg = "/\\s/g,''";
+
+        //根据传入的邮箱判断该邮箱是否已经存在
+        TPortalClass.HyUser HyUser = new TPortalClass.HyUser();
+        HyUser.hy_mail = Email_user;
+        //context.Response.Write(Email_user);
+        //return;
+        if (Email_user.Trim().Replace(Kg, "") == "")
+        {
+            context.Response.Write("2");    //空
+        }
+        else if (HyUser.IsExistEmail())
+        {
+            context.Response.Write("1");    //存在
+        }
+        else
+        {
+            IsInt(Email_user, context);
+        }
+    }
+
+    /// <summary>
+    /// 判断邮箱输入规范
+    /// </summary>
+    /// <param name="inString"></param>
+    /// <returns></returns>
+    public static void IsInt(string inString, HttpContext context)
+    {
+        string patrn = "^[_a-zA-Z0-9\\-\\.]+@([\\-_a-zA-Z0-9]+\\.)+[a-zA-Z0-9]{2,3}$";
+        if (System.Text.RegularExpressions.Regex.IsMatch(inString, patrn))
+        {
+            context.Response.Write("0");
+        }
+        else
+        {
+            context.Response.Write("3");  //不符合
+        }
+    }
+
+    #endregion
+
+    public bool IsReusable
+    {
+        get
+        {
+            return false;
+        }
+    }
+
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+}

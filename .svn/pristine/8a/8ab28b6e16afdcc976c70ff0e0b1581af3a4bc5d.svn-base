@@ -1,0 +1,107 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using TPortalClass;
+
+public partial class ditumain : System.Web.UI.Page
+{
+    hy_gis hy_gis = new hy_gis();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //判断session
+        if (this.Session["uid"] != null)
+        {
+            if (this.Session["uid"].ToString() == "")
+            {
+                this.Response.Redirect("login.aspx");
+            }
+        }
+        else
+        {
+            this.Response.Redirect("login.aspx");
+        }
+        if (!this.IsPostBack)
+        {
+            if (this.Request.QueryString["op"] != null)
+            {
+                this.txtop.Value = this.Request.QueryString["op"].ToString();
+            }
+            if (this.Request.QueryString["docid"] != null)
+            {
+                this.txtdocid.Value = this.Request.QueryString["docid"].ToString();
+            }
+            RptBind();
+            ChkRole("Role0008");    //检查权限
+        }
+    }
+    // 检查权限=================================
+    private void ChkRole(string Roleid)
+    {
+    }
+    // 数据绑定
+    private void RptBind()
+    {
+        if (this.txtop.Value == "modify")
+        {
+            hy_gis hy_gis = new hy_gis();
+            DataTable dt = new DataTable();
+            dt = hy_gis.getGisXYByid(this.txtdocid.Value);
+            if (dt.Rows.Count > 0)
+            {
+                
+                this.txtXzb.Text = dt.Rows[0]["hy_gisX"].ToString();
+                this.txtYzb.Text = dt.Rows[0]["hy_gisY"].ToString();
+                this.txtjkbh.Text = dt.Rows[0]["hy_gisID"].ToString();
+                this.txtbmid.Text = dt.Rows[0]["hy_deptID"].ToString();
+                this.txthjlx.Text = dt.Rows[0]["hy_state"].ToString();
+
+            }
+        }
+        else if (this.txtop.Value == "add")
+        {
+            //得到部门ID
+            this.txtdocid.Value = System.Guid.NewGuid().ToString();
+        }
+    }
+    //保存
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        bool flag = false;
+        hy_gis hy_gis = new hy_gis();
+        hy_gis.hy_id = this.txtdocid.Value;
+        hy_gis.hy_gisX = this.txtXzb.Text;
+        hy_gis.hy_gisY = this.txtYzb.Text;
+        hy_gis.hy_deptID = this.txtbmid.Text;
+        hy_gis.hy_gisID = this.txtjkbh.Text;
+        hy_gis.hy_state = this.txthjlx.Text;
+
+        if (this.txtop.Value == "add")
+        {
+            flag = hy_gis.insert();
+        }
+        else if (this.txtop.Value == "modify")
+        {
+            flag = hy_gis.Update();
+    
+        }
+        Response.Write(flag);
+        if (flag)
+        {
+            Response.Write("<script>alert('保存成功！');window.location='dituList.aspx?rend=" + System.Guid.NewGuid().ToString() + "';</script>");
+        }
+        else
+        {
+            Response.Write("<script>alert('保存失败，请联系管理员！');window.location='dituList.aspx?rend=" + System.Guid.NewGuid().ToString() + "';</script>");
+        }
+    }
+
+
+}

@@ -1,0 +1,112 @@
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="FindLatlong.aspx.cs"
+    Inherits="FindLatlong" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>GoogleMap查找坐标</title>
+    <link type="text/css" rel="stylesheet" href="/css/btncss.css" />
+    <script type="text/javascript">
+        function jsCopy() {
+            var e = document.getElementById("Text2"); //对象是content 
+            e.select(); //选择对象 
+            document.execCommand("Copy"); //执行浏览器复制命令
+        } 
+    </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script language="javascript" type="text/javascript">
+
+        var map;
+        var geocoder;
+        function InitializeMap() {
+
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var myOptions =
+        {
+            zoom: 13,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true
+        };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+        }
+
+        function FindLocaiton() {
+            geocoder = new google.maps.Geocoder();
+            InitializeMap();
+
+            var address = document.getElementById("addressinput").value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                        //position: myLatLng
+                    });
+                    if (results[0].formatted_address) {
+                        region = results[0].formatted_address + '<br />';
+                    }
+
+                    document.getElementById("Text1").value = results[0].formatted_address;
+                    document.getElementById("Text2").value = results[0].geometry.location;
+
+                    var infowindow = new google.maps.InfoWindow({
+                        //content: '<div style =width:400px; height:400px;>Location info:<br/><a href=aaa.html>Country</a> Name:<br/>' + region + '<br/>LatLng:<br/>' + results[0].geometry.location + '</div>'
+                        content: '<div style =width:400px; height:400px;>Location info: <br/>' + region + 'LatLng:<br/>' + results[0].geometry.location + '</div>'
+
+                    });
+                    //google.maps.event.addListener(marker, 'click', function () {
+                    google.maps.event.addListener(marker, 'click', function () {
+                        // Calling the open method of the infoWindow 
+                        infowindow.open(map, marker);
+                    });
+
+                }
+                else {
+                    //alert("Geocode was not successful for the following reason: " + status);
+                    alert("输入不符无法查找，请重试！");
+                }
+            });
+
+
+        }
+
+
+        function Button1_onclick() {
+            FindLocaiton();
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <b>请输入需要查找的地名:</b><input id="addressinput" type="text" style="width: 280px" />&nbsp;&nbsp;&nbsp;&nbsp;<a
+                    href="javascript:void(0)" class="normal" onclick="return Button1_onclick();"><span>查
+                        找</span></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                地址及邮编：<input id="Text1" type="text" style="width: 320px" />&nbsp;&nbsp;经纬度坐标：<input
+                    id="Text2" type="text" style="width: 280px" />&nbsp;&nbsp;<a href="javascript:void(0)"
+                        class="normal" onclick="return jsCopy();"><span>复制坐标</span></a>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="map" style="height: 438px; width: 691px;">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
