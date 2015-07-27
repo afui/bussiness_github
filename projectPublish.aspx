@@ -87,6 +87,11 @@
         });
 
     </script>
+    <script type="text/javascript">
+        function saveData() {
+            document.getElementById("btn_save").click();
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -186,15 +191,15 @@
                                 <li>
                                     <input id="ck_education" type="checkbox" runat="server" value="教育培训" /><span>教育培训</span></li>
                                 <li>
-                                    <input id="Checkbox5" type="checkbox" runat="server" value="智能装备" /><span>智能装备</span></li>
+                                    <input id="ck_equipment" type="checkbox" runat="server" value="智能装备" /><span>智能装备</span></li>
                                 <li>
-                                    <input id="Checkbox6" type="checkbox" runat="server" value="智能家居" /><span>智能家居</span></li>
+                                    <input id="ck_furniture" type="checkbox" runat="server" value="智能家居" /><span>智能家居</span></li>
                                 <li>
-                                    <input id="Checkbox7" type="checkbox" runat="server" value="环保能源" /><span>环保能源</span></li>
+                                    <input id="ck_energy" type="checkbox" runat="server" value="环保能源" /><span>环保能源</span></li>
                                 <li>
-                                    <input id="Checkbox8" type="checkbox" runat="server" value="农林牧渔" /><span>农林牧渔</span></li>
+                                    <input id="ck_agriculture" type="checkbox" runat="server" value="农林牧渔" /><span>农林牧渔</span></li>
                                 <li>
-                                    <input id="Checkbox9" type="checkbox" runat="server" value="其他" /><span>其他</span></li>
+                                    <input id="ck_others" type="checkbox" runat="server" value="其他" /><span>其他</span></li>
                             </ul>
                         </div>
                     </td>
@@ -209,7 +214,7 @@
                     <td width="19"></td>
                     <td height="239" colspan="2" valign="top">
                         <div style="width: 319px; height: 222px; border-radius: 3px;">
-                            <textarea id="txtProjectDetail" cols="100" rows="8" style="width: 300px; height: 250px; visibility: hidden;"></textarea>
+                            <textarea id="txtProjectDetail" runat="server" cols="100" rows="8" style="width: 300px; height: 250px; visibility: hidden;"></textarea>
                         </div>
                     </td>
                     <td height="239"></td>
@@ -218,7 +223,7 @@
                     <td height="70" align="right">预设融资金额</td>
                     <td width="19"></td>
                     <td height="70" colspan="2">
-                        <input type="text" runat="server" id="txtAmount" class="put1" />;万元</td>
+                        <input type="text" runat="server" id="txtAmount" class="put1" />万元</td>
                     <td height="70"></td>
                 </tr>
                 <tr>
@@ -265,13 +270,16 @@
                     <td height="230"></td>
                 </tr>
                 <tr>
-                    <td height="70" colspan="5"><a href="#" class="publish1">发布项目</a></td>
+                    <td height="70" colspan="5"><a href="#" onclick="saveData()" class="publish1">发布项目</a></td>
                 </tr>
             </table>
             <!--release-->
         </div>
         <!--网站底部-->
         <uc2:bottom ID="bottom2" runat="server" />
+        <div>
+            <asp:Button ID="btn_save" runat="server" Text="保存" OnClick="btn_save_Click" />
+        </div>
     </form>
 </body>
 </html>

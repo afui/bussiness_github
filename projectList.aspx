@@ -153,18 +153,7 @@
 
             <div class="Xiangm-right">
                 <ul>
-                    <li>
-                        <img src="Images/Img.jpg"><a href="projectDetail.aspx?rend=<%=System.Guid.NewGuid().ToString() %>"><span>极光HUD智能抬头显示器</span></a><br>
-                        <i>2015.05.23　智能装备</i><p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
-                        <a href="#"><em>了解更多</em></a></li>
-                    <li>
-                        <img src="Images/Img.jpg"><a href="#"><span>极光HUD智能抬头显示器</span></a><br>
-                        <i>2015.05.23　智能装备</i><p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
-                        <a href="#"><em>了解更多</em></a></li>
-                    <li>
-                        <img src="Images/Img.jpg"><a href="#"><span>极光HUD智能抬头显示器</span></a><br>
-                        <i>2015.05.23　智能装备</i><p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
-                        <a href="#"><em>了解更多</em></a></li>
+                    <asp:Label ID="lb_show" runat="server" ></asp:Label>
                 </ul>
             </div>
             <!--Xiangm-right-->
