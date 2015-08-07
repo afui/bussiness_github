@@ -36,6 +36,15 @@
         });
 
     </script>
+    <script>
+        function saveData() {
+            if (document.getElementById('txtMessage').value != "") {
+                document.getElementById('btn_save').click();
+            } else {
+                alert('请填写项目留言！');
+            }
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -75,24 +84,22 @@
             </div>
             <!--Xiangm-left-->
             <div class="Xiangm1-right">
-                <span>极光HUD智能抬头显示器</span><br>
-                <i>2015.05.23　智能装备</i>
-                <img src="Images/Img.jpg">
-                <p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
-                <img src="Images/Img.jpg">
-                <p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
-                <img src="Images/Img.jpg">
-                <p>提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。</p>
+                <asp:Label ID="lb_show" runat="server"></asp:Label>
+
                 <div class="xixmly">
                     <div class="xmly_top">项目留言</div>
-                    <textarea class="xmly_center"></textarea>
-                    <div class="xmly_bottom"><a href="#">发表留言</a></div>
+                    <textarea class="xmly_center" runat="server" id="txtMessage"></textarea>
+                    <div class="xmly_bottom"><a href="javascript:void(0)" onclick="saveData()">发表留言</a></div>
                 </div>
             </div>
             <!--Xiangm1-right-->
         </div>
         <!--网站底部-->
         <uc2:bottom ID="bottom2" runat="server" />
+        <div style="display: ">
+            <asp:Button ID="btn_save" runat="server" Text="保存" OnClick="btn_save_Click" />
+            <asp:TextBox ID="txtDocid" runat="server"></asp:TextBox>
+        </div>
     </form>
 </body>
 </html>

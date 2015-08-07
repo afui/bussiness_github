@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="projectPublish.aspx.cs" Inherits="projectPublish" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="projectPublish.aspx.cs" Inherits="projectPublish" ValidateRequest="false" %>
 
 <%@ Register Src="include/top.ascx" TagName="top" TagPrefix="uc1" %>
 <%@ Register Src="include/bottom.ascx" TagName="bottom" TagPrefix="uc2" %>

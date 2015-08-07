@@ -113,6 +113,12 @@
                         <li url="bussiness/questionList.aspx"><span>咨询列表</span></li>
                     </ul>
                 </div>
+                <div title="项目管理" iconcss="menu-icon-model" class="l-scroll">
+                    <ul id="global_channel_tree2" style="margin-top: 3px;">
+                        <li url="project/projectList.aspx"><span>项目信息列表</span></li>
+                        <li url="bussiness/questionList.aspx"><span>咨询列表</span></li>
+                    </ul>
+                </div>
                 <div title="系统管理" iconcss="menu-icon-setting">
                     <ul class="nlist">
                         <li><a href="javascript:f_addTab('list_user','用户管理','SysManage/list_user.aspx')">用户管理</a></li>

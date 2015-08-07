@@ -186,7 +186,6 @@
                                 <td align="left">
                                     <textarea id="txtdt_summary" cols="100" rows="8" style="width: 700px; height: 280px; visibility: hidden;"
                                         runat="server"></textarea>
-										<input id="date" value="" onclick="WdatePicker();"/>
                                 </td>
                             </tr>
                         </table>

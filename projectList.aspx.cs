@@ -14,6 +14,7 @@ public partial class projectList : System.Web.UI.Page
         project project = new project();
         DataSet dt = project.GetList("");
         StringBuilder stringBuilder = new StringBuilder();
+        string strProjectDetail = "";
         if (dt.Tables[0].Rows.Count > 0)
         {
             for (int i = 0; i < dt.Tables[0].Rows.Count; i++)
@@ -30,9 +31,13 @@ public partial class projectList : System.Web.UI.Page
                     }
                 }
                 stringBuilder.Append("</i>");
-                stringBuilder.Append("<p> 提到HUD，大多数的人也许都还比较陌生，HUD是平视显示器（Head Up Display）的缩写，这一技术最早运用于战斗机上，飞行员只需平视前方，不丧失对于当前形势的掌控，就能方便地查看飞机的仪表数据。由于其安全便利的特点，之后民航机也都纷纷安装此设备。近年来，一些较为高端的汽车也开始配置HUD。");
-                stringBuilder.Append("</p>");
-                stringBuilder.Append("<a href =\"#\"><em> 了解更多 </em></a>\"");
+                strProjectDetail = dt.Tables[0].Rows[i]["projectDetail"].ToString();
+                if (strProjectDetail.Length > 400)
+                {
+                    strProjectDetail = strProjectDetail.Substring(0, 400) + "...";
+                }
+                stringBuilder.Append("<p>" + strProjectDetail + "</p>");
+                stringBuilder.Append("<a href =\"projectDetail.aspx?docid=" + dt.Tables[0].Rows[i]["id"] + "&rend=" + System.Guid.NewGuid().ToString() + "\"><em> 了解更多 </em></a>\"");
                 stringBuilder.Append("</li>\"");
             }
         }

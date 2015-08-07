@@ -48,9 +48,9 @@
                     <span>&nbsp;</span>
                     <li><a target="_balank" href="projectList.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">项目融资</a></li>
                     <span>&nbsp;</span>
-                    <li><a href="#">需求发布</a></li>
+                    <li><a href="demandPublish.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">需求发布</a></li>
                     <span>&nbsp;</span>
-                    <li><a href="#">服务商入住</a></li>
+                    <li><a href="serverCompany.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">服务商入住</a></li>
                     <span>&nbsp;</span>
                     <li><a href="#">创客资本</a></li>
                     <span>&nbsp;</span>
