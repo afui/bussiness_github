@@ -40,17 +40,6 @@
         <form id="form1" runat="server">
             <!--头部-->
             <uc1:top ID="top1" runat="server" />
-            <!--菜单-->
-            <div class="Maun">
-                <div class="Width100">
-                    <ul>
-                        <li><a href="#">所有服务商</a></li>
-                        register<span>&nbsp;</span>
-                        <li><a href="#" class="hover">创客工厂</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <!--分类-->
             <div class="Width100 MarginT20 Classification">
                 <ul>

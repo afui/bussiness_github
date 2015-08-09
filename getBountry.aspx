@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="orderConfirm.aspx.cs" Inherits="orderConfirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="getBountry.aspx.cs" Inherits="getBountry" %>
 
 <%@ Register Src="include/top.ascx" TagName="top" TagPrefix="uc1" %>
 <%@ Register Src="include/bottom.ascx" TagName="bottom" TagPrefix="uc2" %>
@@ -46,8 +46,7 @@
 
             <div class="mission">需求任务发布</div>
             <div class="mission1">
-                <img src="images/mission2.gif">
-            </div>
+                <img src="images/mission3.gif"></div>
 
         </div>
         <!--分类-->
@@ -69,55 +68,33 @@
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
                     <td height="166" valign="middle">
-                        <table width="815" border="1" cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" style="margin: 0">
+                        <table width="867" border="1" cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" style="margin: 0">
                             <tr>
-                                <td width="173" height="50" align="center">服务类别</td>
-                                <td width="277" height="50" align="center">需求标题</td>
-                                <td width="148" height="50" align="center">行业</td>
-                                <td width="207" height="50" align="center">需求描述</td>
+                                <td width="291" height="50" align="center">需求标题</td>
+                                <td width="282" height="50" align="center">订单号</td>
+                                <td width="286" height="50" align="center">交易金额</td>
                             </tr>
                             <tr bgcolor="#fff" style="font-size: 14px;">
-                                <td height="100" align="center">Logo/VI设计<br>
-                                    Logo设计</td>
                                 <td height="100" align="center">会飞猪创客部落网络平台标志设计</td>
-                                <td height="100" align="center">互联网</td>
-                                <td height="100" align="center"></td>
+                                <td height="100" align="center">1093526800281300</td>
+                                <td height="100" align="center">1000元</td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
-                    <td height="38">备注</td>
-                </tr>
-                <tr bgcolor="#f7f7f7">
-                    <td height="50" colspan="2"></td>
-                    <td height="50">
-                        <input type="text" class="put"></td>
-                </tr>
-                <tr bgcolor="#f7f7f7">
-                    <td colspan="2"></td>
-                    <td height="38">联系方式</td>
-                </tr>
-                <tr bgcolor="#f7f7f7">
-                    <td height="50" colspan="2"></td>
-                    <td height="50">
-                        <input type="text" class="put"></td>
-                </tr>
-                <tr bgcolor="#f7f7f7">
-                    <td colspan="2"></td>
-                    <td height="38"><i></i>征集时间： 7天</td>
-                </tr>
-                <tr bgcolor="#f7f7f7">
-                    <td height="50" colspan="2"></td>
-                    <td height="50">赏金金额：<strong>1000</strong>元</td>
+                    <td height="153">
+                        <input type="radio" name="radio" id="radio" value="radio">
+                        <label for="radio">
+                            <img src="images/mission4.gif"></label></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
                     <td height="20"></td>
                 </tr>
             </table>
-            <a href="getBountry.aspx?rend=<%=System.Guid.NewGuid().ToString() %>" class="Quest Quest2">确定，去托管赏金</a><a href="demandPublish.aspx?rend=<%=System.Guid.NewGuid().ToString() %>" class="Quest1">返回上一步</a>
+            <a href="#" class="Quest Quest3">确定支付</a>
         </div>
         <!--Task-->
         <!--网站底部-->

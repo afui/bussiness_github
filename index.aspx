@@ -40,24 +40,6 @@
     <form id="form1" runat="server">
         <!--头部-->
         <uc1:top ID="top1" runat="server" />
-        <!--菜单-->
-        <div class="Maun">
-            <div class="Width100">
-                <ul>
-                    <li><a href="#" class="hover">网站首页</a></li>
-                    <span>&nbsp;</span>
-                    <li><a target="_balank" href="projectList.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">项目融资</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="demandPublish.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">需求发布</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="serverCompany.aspx?rend=<%=System.Guid.NewGuid().ToString() %>">服务商入住</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#">创客资本</a></li>
-                    <span>&nbsp;</span>
-                    <li><a target="_balank" href="showExportList.aspx?rend=<%=System.Guid.NewGuid().ToString() %>>">专家咨询</a></li>
-                </ul>
-            </div>
-        </div>
         <!--广告条-->
         <div class="Banner">
             <div id="kinMaxShow">

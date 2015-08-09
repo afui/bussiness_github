@@ -97,24 +97,6 @@
     <form id="form1" runat="server">
         <!--头部-->
         <uc1:top ID="top1" runat="server" />
-        <!--菜单-->
-        <div class="Maun">
-            <div class="Width100">
-                <ul>
-                    <li><a href="#">网站首页</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#" class="hover">项目融资</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#">需求发布</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#">服务商入住</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#">创客资本</a></li>
-                    <span>&nbsp;</span>
-                    <li><a href="#">专家咨询</a></li>
-                </ul>
-            </div>
-        </div>
         <!--分类-->
         <div class="Width100 Issue">
             <div class="release">发布融资项目</div>

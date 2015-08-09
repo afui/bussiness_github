@@ -98,17 +98,6 @@
         <body>
             <!--头部-->
             <uc1:top ID="top1" runat="server" />
-            <!--菜单-->
-            <div class="Maun">
-                <div class="Width100">
-                    <ul>
-                        <li><a href="#" class="hover">专家咨询</a></li>
-                        register<span>&nbsp;</span>
-                        <li><a href="#">问题总汇</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="Width100 Xiangm">
 
                 <div class="Xiangm-left">
