@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* 通用 */
 *{ font-family: "微软雅黑";}
 ul,li,p,form{ margin: 0; padding: 0; list-style: none;}
@@ -48,7 +48,20 @@ a:hover{ color:#C00; text-decoration: none;}
 .Logo_User ul li a:hover{ color: #FF0;}
 
 /*注册效果*/
-#dowebokR { background-color: #30b0c7;}
+#region_2 { background-color: #30b0c7;}
+.User_Reg{ padding:20px; color: #FFF;}
+.User_Reg strong{ display: block; margin-bottom:10px; overflow: hidden;}
+.User_Reg strong b{ font-size: 16px; float: left;}
+.User_Reg strong a{ background:url(../Images/User_Cols.png) no-repeat top; width: 25px; height: 25px; float: right;}
+.User_Reg strong a:hover{ background: url(../Images/User_Cols.png) no-repeat bottom; width: 25px; height: 25px;}
+.User_Reg ul{ padding:3px 10px;}
+.User_Reg ul li{ line-height: 26px; margin-top:6px; overflow: hidden;}
+.User_Reg ul li label{ float: left; font-weight: normal;}
+.User_Reg ul li a{ float: right; color: #FFF;}
+.User_Reg ul li a:hover{ color: #FF0;}
+
+/*注册效果---1*/
+#region_1 { background-color: #30b0c7;}
 .User_Reg{ padding:20px; color: #FFF;}
 .User_Reg strong{ display: block; margin-bottom:10px; overflow: hidden;}
 .User_Reg strong b{ font-size: 16px; float: left;}
