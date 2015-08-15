@@ -10,12 +10,51 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using TPortalClass;
+
 //using System.Xml.Linq;
 
 public partial class include_top : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (this.Session["uid"] == null || this.Session["uid"].ToString() == "")
+        {
+            this.lb_showLogin.Text = "<a href=\"javascript:void(0)\" class=\"Logo\" id=\"User_Register\">注册</a>";
+            this.lb_showLogin.Text += "<a href=\"javascript:void(0)\" class=\"Rion\" id=\"User_Login\">登录</a>";
+
+        }
+        else if (this.Session["uname"] != null)
+        {
+            this.lb_showLogin.Text = "<a href=\"javascript:void(0)\" class=\"Logo\" onclick=\"loginOut();\" id=\"loginOut\">注销</a>  <a href=\"javascript:void(0)\" class=\"Rion\" id=\"User\">欢迎你，" + this.Session["uname"].ToString() + "</a>";
+            if (this.Session["utype"] != null)
+            {
+                if (this.Session["utype"].ToString() == "1")
+                {
+                    personal personal = new personal();
+                    personal.GetModel(this.Session["uid"].ToString().Trim()); ;
+                    this.lb_name.Text = personal.name;
+                    this.lb_email.Text = personal.email;
+                    this.lb_type.Text = "个人/创客";
+                }
+                else if (this.Session["utype"].ToString() == "2")
+                {
+                    investor investor = new investor();
+                    investor.GetModel(this.Session["uid"].ToString().Trim()); ;
+                    this.lb_name.Text = investor.name;
+                    this.lb_email.Text = investor.eamil;
+                    this.lb_type.Text = "投资人";
+                }
+                else if (this.Session["utype"].ToString() == "3")
+                {
+                    company company = new company();
+                    company.GetModel(this.Session["uid"].ToString().Trim()); ;
+                    this.lb_name.Text = company.name;
+                    this.lb_email.Text = company.eamil;
+                    this.lb_type.Text = "企业";
+                }
+            }
+        }
     }
     /// <summary>
     /// 发送邮件
@@ -41,9 +80,198 @@ public partial class include_top : System.Web.UI.UserControl
 
     protected void btn_save_Click(object sender, EventArgs e)
     {
-        Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>saveData();</script>");
-        string strBody = "" + this.txtName.Value + ",<br/><br/>感谢您注册 会飞猪，点击下面的链接可以登录：<br/><br/>http://ninghao.net/user/reset/23206/1428324932/zO8Tk2embvlNxvrfvOMrI7Yh8oSRW3rRLHfW5XUaWPg<br/><br/>这个链接只能使用一次，会引导您到设置密码。<br/><br/>在设置好您的密码之后，您就可以在 http://ninghao.net/user 使用下列帐号和密码登录了：<br/><br/>用户名: " + this.txtEmail.Value + "<br/>密码: 您的密码<br/><br/>-&nbsp; 会飞猪 团队<br/><br/><br/>";
-        SendSMTPEMail("smtp.163.com", "wjszxli@163.com", "love673236376", this.txtEmail.Value, "会飞猪 的 " + this.txtName.Value + " 帐户详情", strBody);
+        string strType = "";
+        string strYzid = System.Guid.NewGuid().ToString();
+        if (this.ck_personal.Checked)
+        {
+            addPersonal(strYzid);
+            strType = "1";
+        }
+        else if (this.ck_investor.Checked)
+        {
+            addInvestor(strYzid);
+            strType = "2";
+        }
+        else if (this.ck_enterprise.Checked)
+        {
+            addCompany(strYzid);
+            strType = "3";
+        }
+        string strBody = "" + this.txtName.Value + ", 你好,<br/><br/>感谢您注册<b>会飞猪</b>。</br><b>请点击以下链接认证此邮箱：</b><br/><br/>http://192.168.0.152:8009/accountConfire.aspx?user=" + this.txtEmail.Value + "&type=" + strType + "&ren=" + strYzid + "<br/><br/>(认证成功后，可用来取回账号密码)<br/><br/>-&nbsp; 会飞猪 团队<br/><br/><br/>";
+        SendSMTPEMail("smtp.163.com", "wjszxli@163.com", "love673236376", this.txtEmail.Value, "欢迎您注册会飞猪账户", strBody);
         Response.Write("<script>alert('注册成功，我们将发送一封验证邮件到您的邮箱，您可以通过邮件来验证注册！');window.location='index.aspx?rend=" + System.Guid.NewGuid().ToString() + "'</script>");
+    }
+
+    private void addPersonal(string strYzid)
+    {
+        personal personal = new personal();
+        personal.id = System.Guid.NewGuid().ToString();
+        personal.loginId = this.txtEmail.Value;
+        personal.pwd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(this.txtPwd.Value, "MD5");
+        personal.name = this.txtName.Value;
+        personal.telNumber = "";
+        personal.phoneNumber = "";
+        personal.webSite = "";
+        personal.address = "";
+        personal.team = "";
+        personal.ifEnable = "0";
+        personal.detail = "";
+        personal.email = this.txtEmail.Value;
+        personal.yzid = strYzid;
+        personal.createTime = DateTime.Now;
+        personal.Add();
+    }
+
+    private void addInvestor(string strYzid)
+    {
+        investor investor = new investor();
+        investor.id = System.Guid.NewGuid().ToString();
+        investor.loginId = this.txtEmail.Value;
+        investor.pwd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(this.txtPwd.Value, "MD5");
+        investor.name = this.txtName.Value;
+        investor.telNumber = "";
+        investor.phoneNumber = "";
+        investor.company = "";
+        investor.address = "";
+        investor.contact = "";
+        investor.ifEnable = "0";
+        investor.detail = "";
+        investor.intelligence = "";
+        investor.capital = 0;
+        investor.eamil = this.txtEmail.Value;
+        investor.yzid = strYzid;
+        investor.createTime = DateTime.Now;
+        investor.Add();
+    }
+
+    private void addCompany(string strYzid)
+    {
+
+        company company = new company();
+        company.id = System.Guid.NewGuid().ToString();
+        company.loginId = this.txtEmail.Value;
+        company.pwd = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(this.txtPwd.Value, "MD5");
+        company.name = this.txtName.Value;
+        company.telNumber = "";
+        company.phoneNumber = "";
+        company.companyNmae = "";
+        company.address = "";
+        company.contact = "";
+        company.ifEnable = "0";
+        company.detail = "";
+        company.scale = "";
+        company.capital = 0;
+        company.legalPerson = "";
+        company.type = "";
+        company.eamil = this.txtEmail.Value;
+        company.yzid = strYzid;
+        company.createTime = DateTime.Now;
+        company.Add();
+    }
+
+    protected void btn_login_Click(object sender, EventArgs e)
+    {
+        string CheckCode = this.txtCheckCode.Value.Trim();  //验证码
+        if (String.Compare(Request.Cookies["ValidateCode"].Value, CheckCode, true) != 0)
+        {
+            Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('验证码输入不正确，请重新输入！');</script>");
+            return;
+        }
+        if (this.st_type.Value == "1")
+        {
+            personal personal = new personal();
+            personal.loginId = this.txtUid.Value.Trim();
+            personal.pwd = this.txtLogPwd.Value.Trim();
+            personal.ifEnable = "1";
+            if (personal.userIfEnable())
+            {
+                Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('该用户没有认证，请查看邮箱认证用户！');</script>");
+                return;
+            }
+            else
+            {
+                DataSet dtSet = personal.userLogin();
+                if (dtSet.Tables[0].Rows.Count > 0)
+                {
+                    Session["uid"] = dtSet.Tables[0].Rows[0]["id"].ToString();
+                    Session["uname"] = dtSet.Tables[0].Rows[0]["name"].ToString();
+                    Session["loginId"] = dtSet.Tables[0].Rows[0]["loginId"].ToString();
+                    Session["utype"] = "1";
+                    this.lb_showLogin.Text = "<a href=\"javascript:void(0)\" class=\"Logo\"  onclick=\"loginOut();\"  id=\"loginOut\">注销</a><a href=\"javascript:void(0)\" class=\"Rion\" id=\"User\"> 欢迎你，" + dtSet.Tables[0].Rows[0]["name"].ToString() + "</a>";
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('用户名或密码输入错，请重新输入！');</script>");
+                    return;
+                }
+            }
+        }
+        else if (this.st_type.Value == "2")
+        {
+            investor investor = new investor();
+            investor.loginId = this.txtUid.Value.Trim();
+            investor.pwd = this.txtLogPwd.Value.Trim();
+            investor.ifEnable = "1";
+            if (investor.userIfEnable())
+            {
+                Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('该用户没有认证，请查看邮箱认证用户！');</script>");
+                return;
+            }
+            else
+            {
+                DataSet dtSet = investor.userLogin();
+                if (dtSet.Tables[0].Rows.Count > 0)
+                {
+                    Session["uid"] = dtSet.Tables[0].Rows[0]["id"].ToString();
+                    Session["uname"] = dtSet.Tables[0].Rows[0]["name"].ToString();
+                    Session["loginId"] = dtSet.Tables[0].Rows[0]["loginId"].ToString();
+                    Session["utype"] = "2";
+                    this.lb_showLogin.Text = "<a href=\"javascript:void(0)\" class=\"Logo\"  onclick=\"loginOut();\"  id=\"loginOut\">注销</a><a href=\"javascript:void(0)\" class=\"Rion\" id=\"User\"> 欢迎你，" + dtSet.Tables[0].Rows[0]["name"].ToString() + "</a>";
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('用户名或密码输入错，请重新输入！');</script>");
+                    return;
+                }
+            }
+        }
+        else if (this.st_type.Value == "3")
+        {
+            company company = new company();
+            company.loginId = this.txtUid.Value.Trim();
+            company.pwd = this.txtLogPwd.Value.Trim();
+            company.ifEnable = "1";
+            if (company.userIfEnable())
+            {
+                Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('该用户没有认证，请查看邮箱认证用户！');</script>");
+                return;
+            }
+            else
+            {
+                DataSet dtSet = company.userLogin();
+                if (dtSet.Tables[0].Rows.Count > 0)
+                {
+                    Session["uid"] = dtSet.Tables[0].Rows[0]["id"].ToString();
+                    Session["uname"] = dtSet.Tables[0].Rows[0]["name"].ToString();
+                    Session["loginId"] = dtSet.Tables[0].Rows[0]["loginId"].ToString();
+                    Session["utype"] = "3";
+                    this.lb_showLogin.Text = "<a href=\"javascript:void(0)\" class=\"Logo\"  onclick=\"loginOut();\"  id=\"loginOut\">注销</a><a href=\"javascript:void(0)\" class=\"Rion\" id=\"User\"> 欢迎你，" + dtSet.Tables[0].Rows[0]["name"].ToString() + "</a>";
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(Page.ClientScript.GetType(), "myscript", "<script>tip('用户名或密码输入错，请重新输入！');</script>");
+                    return;
+                }
+            }
+        }
+    }
+
+    protected void btn_loginOut_Click(object sender, EventArgs e)
+    {
+        Session["uid"] = "";
+        Session["uname"] = "";
+        Session["loginId"] = "";
+        Session["utype"] = "";
+        Response.Redirect("index.aspx?ren=" + System.Guid.NewGuid().ToString());
     }
 }

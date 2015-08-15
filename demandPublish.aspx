@@ -36,6 +36,17 @@
         });
 
     </script>
+    <script type="text/javascript">
+        function saveSumit() {
+            //验证是否登录
+            var strFlag = "<%=ifNotLong()%>";
+            if (strFlag == "True") {
+                document.getElementById('User_Login').click();
+                return;
+            }
+            document.getElementById('btn_submit').click();
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -48,7 +59,6 @@
             <div class="mission1">
                 <img src="images/mission1.gif">
             </div>
-
         </div>
         <!--分类-->
 
@@ -57,16 +67,25 @@
             <table width="982" border="0" cellpadding="0" cellspacing="0">
                 <tr bgcolor="#f7f7f7">
                     <td width="20"></td>
-                    <td height="55" colspan="3">一、选择需求服务类目</td>
+                    <td height="55" colspan="4">一、选择需求服务类目</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td height="50" colspan="2"></td>
                     <td width="164" height="50" align="left" valign="top">
-                        <select name="select" class="Jobs">
+                        <select name="select" class="Jobs" runat="server" id="firstClass">
+                            <option>品牌设计</option>
+                            <option>商标注册/法律/代账</option>
+                            <option>文案/取名</option>
+                            <option>网站开发/UI设计</option>
+                            <option>软件/APP开发</option>
+                            <option>服装/工业设计</option>
+                        </select></td>
+                    <td width="164" height="50" align="left" valign="top">
+                        <select name="select" id="secondClass" runat="server" class="Jobs">
                             <option>Logo/VI设计</option>
                         </select></td>
                     <td width="761" height="50" valign="top">
-                        <select name="select" class="Jobs">
+                        <select name="select" id="thirdClass" runat="server" class="Jobs">
                             <option>LOGO设计</option>
                         </select></td>
                 </tr>
@@ -90,16 +109,16 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put"></td>
+                        <input type="text" id="txtTaskName" runat="server" class="put"></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
-                    <td height="38" valign="bottom"><i>*</i>您的需求任务名称</td>
+                    <td height="38" valign="bottom"><i>*</i>您的项目名称</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="40">
-                        <select name="select" class="Jobs">
+                        <select name="select" runat="server" id="st_ItemName" class="Jobs">
                             <option>LOGO设计</option>
                         </select></td>
                 </tr>
@@ -110,7 +129,7 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="180">
-                        <textarea class="Jobs1"></textarea></td>
+                        <textarea class="Jobs1" id="txtDetail" runat="server"></textarea></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
@@ -119,7 +138,7 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put"></td>
+                        <input type="text" id="txtSummary" runat="server" class="put"></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
@@ -138,7 +157,8 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put"></td>
+                        <input type="text" id="txtPhone" runat="server" class="put" />
+                    </td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
@@ -162,17 +182,22 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put1" placeholder="100">元</td>
+                        <input type="text" id="txtAmount" runat="server" class="put1" placeholder="100">元</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
-                    <td height="40" valign="bottom"><i>*</i>任务征集形式</td>
+                    <td height="40" valign="bottom"><i>*</i>赏金分配方式</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <select name="select" class="Jobs">
-                            <option>多人分享</option>
+                        <select name="select" id="txtDistribution" runat="server" class="Jobs">
+
+                            <option>单人悬赏</option>
+                            <option>多人悬赏</option>
+                            <option>计件任务</option>
+                            <option>招标任务</option>
+                            <option>雇佣任务</option>
                         </select></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
@@ -182,7 +207,7 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="38" colspan="2"></td>
                     <td height="50">
-                        <select name="select" class="Jobs">
+                        <select name="select" id="txtWay" runat="server" class="Jobs">
                             <option>招标</option>
                         </select></td>
                 </tr>
@@ -196,31 +221,36 @@
                         <div class="out2">
                             <ul>
                                 <li>
-                                    <input type="checkbox"><span>7天</span></li>
+                                    <input type="checkbox" id="ck_days1" runat="server" value="7"><span>7天</span></li>
                                 <li>
-                                    <input type="checkbox"><span>5天</span></li>
+                                    <input type="checkbox" id="ck_days2" runat="server" value="5"><span>5天</span></li>
                                 <li>
-                                    <input type="checkbox"><span>3天</span></li>
+                                    <input type="checkbox" id="ck_days3" runat="server" value="3"><span>3天</span></li>
                                 <li>
-                                    <input type="checkbox"><span>1天</span></li>
+                                    <input type="checkbox" id="ck_days4" runat="server" value="1"><span>1天</span></li>
                             </ul>
                         </div>
                     </td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
-                    <td height="38"><em>其他</em><input type="text" class="Jobs2" placeholder="20"><em>天</em></td>
+                    <td height="38"><em>其他</em><input type="text" class="Jobs2" id="other_Days" runat="server" placeholder="20"><em>天</em></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
                     <td height="20"></td>
                 </tr>
             </table>
-            <a href="orderConfirm.aspx?rend=<%=System.Guid.NewGuid().ToString() %>" class="Quest">下一步</a>
+            <a href="javascript:void(0);" onclick="saveSumit();" class="Quest">下一步</a>
         </div>
         <!--Task-->
         <!--网站底部-->
         <uc2:bottom ID="bottom2" runat="server" />
+        <div style="display: none">
+            <asp:Button ID="btn_submit" runat="server" Text="保存" OnClick="btn_save_Click" />
+            <input id="txtDocid" type="text" runat="server" />
+            <input type="text" id="txtOp" value="" runat="server" />
+        </div>
     </form>
 </body>
 </html>

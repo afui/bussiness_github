@@ -10,11 +10,33 @@ using TPortalClass;
 
 public partial class showExportList : System.Web.UI.Page
 {
+    private int pageSize = 12;
+    private int pageNo = 1;
+    private int totalPage = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (this.Request.QueryString["page"] != null)
+        {
+            try
+            {
+                pageNo = Convert.ToInt32(this.Request.QueryString["page"].ToString());
+            }
+            catch
+            {
+                pageNo = 1;
+            }
+
+        }
         StringBuilder stringBuilder = new StringBuilder();
         dt_expert dtExpert = new dt_expert();
-        DataSet dt = dtExpert.GetList("");
+        DataSet dt = dtExpert.GetListPage(pageNo, pageSize, "");
+        DataSet dtDataSet = dtExpert.GetList("");
+        totalPage = dtDataSet.Tables[0].Rows.Count / pageSize;
+        if (dtDataSet.Tables[0].Rows.Count % pageSize > 0)
+        {
+            totalPage++;
+        }
+        this.lb_page.Text = HyCommon.page("\"#Pagle\"", pageNo.ToString(), pageSize.ToString(), totalPage.ToString(), "");
         DataTable dtImg = new DataTable();
         HyFileatt hyFileatt = new HyFileatt();
         //控制数据条数

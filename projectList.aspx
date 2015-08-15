@@ -133,11 +133,10 @@
 
             <div class="Xiangm-right">
                 <ul>
-                    <asp:Label ID="lb_show" runat="server" ></asp:Label>
+                    <asp:Label ID="lb_show" runat="server"></asp:Label>
                 </ul>
             </div>
             <!--Xiangm-right-->
-
         </div>
 
         <!--分页-->

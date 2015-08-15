@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="Css/bootstrap.css" />
     <link rel="stylesheet" href="Css/font-awesome.min.css" />
     <link rel="stylesheet" href="Css/style.css" />
+    <script src="js/slimpage.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#kinMaxShow").kinMaxShow({
@@ -45,26 +46,10 @@
         <div class="Width100 factory_li1">
             <asp:Label ID="lb_show" runat="server"></asp:Label>
         </div>
-
+        <asp:Label ID="lb_page" runat="server" ></asp:Label>
         <!--分页-->
-        <div class="Width100 Pagle">
-            <ul class="pagination pagination-sm">
-                <%-- <li class="disabled">
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">上一页</span>
-                    </a>
-                </li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">下一页</span>
-                    </a>
-                </li>--%>
-            </ul>
+        <div id="Pagle" style="text-align: center" >
+          
         </div>
         <!--网站底部-->
         <uc2:bottom ID="bottom2" runat="server" />

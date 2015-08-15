@@ -1,17 +1,13 @@
-/* simpler-sidebar v1.2.0 (http://dcdeiv.github.io/simpler-sidebar)
- * Copyright 2015-2015 and licensed under GPLv2 (https://github.com/dcdeiv/simpler-sidebar/blob/master/LICENSE)
- */
 (function($) {
     $.fn.simplerSidebar = function(options) {
         var cfg = $.extend(true, $.fn.simplerSidebar.settings, options);
 
         return this.each(function() {
-            var align, sbw, ssbInit, ssbStyle, maskInit,
-                maskStyle,
+            var align, sbw, ssbInit, ssbStyle, maskInit, maskStyle,
                 attr = cfg.attr,
                 $sidebar = $(this),
                 $opener = $(cfg.opener),
-                $links = $(cfg.sidebar.closingLinks),
+                $links = cfg.sidebar.closingLinks,
                 duration = cfg.animation.duration,
                 sbMaxW = cfg.sidebar.width,
                 gap = cfg.sidebar.gap,
@@ -39,10 +35,35 @@
                     complete: autoFlow
                 },
 
+                animateOpen = function() {
+                    $sidebar
+                        .animate(animationStart, activate)
+                        .attr('data-' + attr, 'active');
+
+                    $mask.fadeIn(duration);
+                },
+                animateClose = function() {
+                    $sidebar
+                        .animate(animationReset, deactivate)
+                        .attr('data-' + attr, 'disabled');
+
+                    $mask.fadeOut(duration);
+                },
+                closeSidebar = function() {
+                    var isWhat = $sidebar.attr('data-' + attr),
+                        csbw = $sidebar.width();
+
+                    animationReset[align] = -csbw;
+
+                    if (isWhat === 'active') {
+                        animateClose();
+                    }
+                },
+
                 $mask = $('<div>').attr('data-' + attr, 'mask');
 
             //Checking sidebar align
-            if (cfg.sidebar.align === (undefined || 'right')) {
+            if (cfg.sidebar.align === undefined || cfg.sidebar.align === 'right') {
                 align = 'right';
             } else if (cfg.sidebar.align === 'left') {
                 align = 'left';
@@ -88,67 +109,26 @@
                 $mask.appendTo('body').css(maskStyle);
             }
 
+            //Opening and closing the Sidebar when $opener is clicked
             $opener.click(function() {
-                var isWhat = $sidebar.attr('data-' +
-                        attr),
+                var isWhat = $sidebar.attr('data-' + attr),
                     csbw = $sidebar.width();
 
                 animationReset[align] = -csbw;
 
                 if (isWhat === 'disabled') {
-                    $sidebar
-                        .animate(animationStart,
-                            activate)
-                        .attr('data-' + attr, 'active');
-
-                    $mask.fadeIn(duration);
+                    animateOpen();
                 } else if (isWhat === 'active') {
-                    $sidebar
-                        .animate(animationReset,
-                            deactivate)
-                        .attr('data-' + attr,
-                            'disabled');
-
-                    $mask.fadeOut(duration);
+                    animateClose();
                 }
             });
 
-            //Closing Sidebar
-            $mask.click(function() {
-                var isWhat = $sidebar.attr('data-' +
-                        attr),
-                    csbw = $sidebar.width();
+            //Closing Sidebar when the mask is clicked
+            $mask.click(closeSidebar);
 
-                //Redefining animationReset
-                animationReset[align] = -csbw;
+            //Closing Sidebar when a link inside of it is clicked
+            $sidebar.on('click', $links, closeSidebar);
 
-                if (isWhat === 'active') {
-
-                    $sidebar.animate(animationReset,
-                            deactivate)
-                        .attr('data-' + attr,
-                            'disabled');
-
-                    $mask.fadeOut(duration);
-                }
-            });
-
-//        $sidebar.on('click', $links, function() {
-//            var isWhat = $sidebar.attr('data-' +
-//                    attr),
-//                csbw = $sidebar.width();
-//
-//            animationReset[align] = -csbw;
-//
-//            if (isWhat === 'active') {
-//                $sidebar.animate(animationReset,
-//                        deactivate)
-//                    .attr('data-' + attr,
-//                        'disabled');
-//
-//                $mask.fadeOut(duration);
-//            }
-//        });
             //Adjusting width;
             $(window).resize(function() {
                 var rsbw, reset,
@@ -189,7 +169,7 @@
             easing: 'swing'
         },
         sidebar: {
-            width: 350,
+            width: 300,
             gap: 64,
             closingLinks: 'a',
             css: {

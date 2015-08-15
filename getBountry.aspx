@@ -34,7 +34,31 @@
                 }
             });
         });
+    </script>
+    <script type="text/javascript">
+        function dataSubmit() {
+            document.getElementById('btn_save').click();
+        }
+        function tip(prompt) {
+            var d = dialog({
+                title: '提示',
+                content: prompt
+            });
+            d.show();
+        }
 
+        function success() {
+            var d = dialog({
+                title: '提示',
+                content: '您的需求发布成功！',
+                okValue: '确定',
+                ok: function () {
+                    window.location = 'allDemand.aspx?rend=<%=System.Guid.NewGuid().ToString()%>';
+                    return false;
+                }
+            });
+            d.show();
+        }
     </script>
 </head>
 <body>
@@ -46,7 +70,8 @@
 
             <div class="mission">需求任务发布</div>
             <div class="mission1">
-                <img src="images/mission3.gif"></div>
+                <img src="images/mission3.gif">
+            </div>
 
         </div>
         <!--分类-->
@@ -75,9 +100,12 @@
                                 <td width="286" height="50" align="center">交易金额</td>
                             </tr>
                             <tr bgcolor="#fff" style="font-size: 14px;">
-                                <td height="100" align="center">会飞猪创客部落网络平台标志设计</td>
-                                <td height="100" align="center">1093526800281300</td>
-                                <td height="100" align="center">1000元</td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_title" runat="server"></asp:Label></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_orderid" runat="server"></asp:Label></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_amount" runat="server"></asp:Label></td>
                             </tr>
                         </table>
                     </td>
@@ -85,7 +113,7 @@
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
                     <td height="153">
-                        <input type="radio" name="radio" id="radio" value="radio">
+                        <input type="radio" name="radio" id="radio" runat="server" checked="True" value="radio">
                         <label for="radio">
                             <img src="images/mission4.gif"></label></td>
                 </tr>
@@ -94,7 +122,11 @@
                     <td height="20"></td>
                 </tr>
             </table>
-            <a href="#" class="Quest Quest3">确定支付</a>
+            <a href="javascript:void(0);" onclick="dataSubmit()" class="Quest Quest3">确定支付</a>
+        </div>
+        <div style="display: none">
+            <input id="txtDocid" runat="server" />
+            <asp:Button ID="btn_save" runat="server" Text="保存" OnClick="btn_save_Click" />
         </div>
         <!--Task-->
         <!--网站底部-->

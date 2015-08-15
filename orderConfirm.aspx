@@ -34,8 +34,21 @@
                 }
             });
         });
-
     </script>
+    <script type="text/javascript">
+        function dataSubmit() {
+            //验证是否登录
+            var strFlag = "<%=ifNotLong()%>";
+            if (strFlag == "True") {
+                document.getElementById('User_Login').click();
+                return;
+            }
+            document.getElementById('btn_save').click();
+        }
+    </script>
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -73,15 +86,18 @@
                             <tr>
                                 <td width="173" height="50" align="center">服务类别</td>
                                 <td width="277" height="50" align="center">需求标题</td>
-                                <td width="148" height="50" align="center">行业</td>
+                                <td width="148" height="50" align="center">项目名称</td>
                                 <td width="207" height="50" align="center">需求描述</td>
                             </tr>
                             <tr bgcolor="#fff" style="font-size: 14px;">
-                                <td height="100" align="center">Logo/VI设计<br>
-                                    Logo设计</td>
-                                <td height="100" align="center">会飞猪创客部落网络平台标志设计</td>
-                                <td height="100" align="center">互联网</td>
-                                <td height="100" align="center"></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_thirdClass" runat="server"></asp:Label></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_name" runat="server"></asp:Label></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_project" runat="server"></asp:Label></td>
+                                <td height="100" align="center">
+                                    <asp:Label ID="lb_detail" runat="server"></asp:Label></td>
                             </tr>
                         </table>
                     </td>
@@ -93,7 +109,7 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="50" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put"></td>
+                        <input type="text" id="txtSummary" runat="server" class="put"></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
@@ -102,22 +118,28 @@
                 <tr bgcolor="#f7f7f7">
                     <td height="50" colspan="2"></td>
                     <td height="50">
-                        <input type="text" class="put"></td>
+                        <input type="text" id="txtphone" runat="server" class="put"></td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
-                    <td height="38"><i></i>征集时间： 7天</td>
+                    <td height="38"><i></i>征集时间：
+                        <asp:Label ID="lb_day" runat="server"></asp:Label>天</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td height="50" colspan="2"></td>
-                    <td height="50">赏金金额：<strong>1000</strong>元</td>
+                    <td height="50">赏金金额：<strong><asp:Label ID="lb_ammount" runat="server"></asp:Label></strong>元</td>
                 </tr>
                 <tr bgcolor="#f7f7f7">
                     <td colspan="2"></td>
                     <td height="20"></td>
                 </tr>
             </table>
-            <a href="getBountry.aspx?rend=<%=System.Guid.NewGuid().ToString() %>" class="Quest Quest2">确定，去托管赏金</a><a href="demandPublish.aspx?rend=<%=System.Guid.NewGuid().ToString() %>" class="Quest1">返回上一步</a>
+            <a href="javascript:void(0);" onclick="dataSubmit();" class="Quest Quest2">确定，去托管赏金</a><a href="javascript:void(0);" onclick="window.location='demandPublish.aspx?op=modify&id='+document.getElementById('txtDocid').value+'&rend=<%=System.Guid.NewGuid().ToString() %>'" class="Quest1">返回上一步</a>
+        </div>
+        <div style="display: none">
+            <input type="text" id="txtOp" value="" runat="server" />
+            <input type="text" id="txtDocid" value="" runat="server" />
+            <asp:Button ID="btn_save" runat="server" Text="保存" OnClick="btn_save_Click" />
         </div>
         <!--Task-->
         <!--网站底部-->

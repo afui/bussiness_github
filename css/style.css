@@ -47,6 +47,8 @@ a:hover{ color:#C00; text-decoration: none;}
 .Logo_User ul li a{ float: right; color: #FFF;}
 .Logo_User ul li a:hover{ color: #FF0;}
 
+/*登录后的效果*/
+#userShow { background-color: #30b0c7;}
 /*注册效果*/
 #region_2 { background-color: #30b0c7;}
 .User_Reg{ padding:20px; color: #FFF;}
